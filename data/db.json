@@ -1,22 +1,20 @@
 {
-  "personal_info": {
+  "homepage": {
     "name": "Dmitriy",
     "surname": "Shreyder",
     "profession": "IT Projekt Manager/Web-Developer",
-    "visa": "Visa (Austria): Red-White-Red Plus",
-    "address": "Address: Ried im Zillertal, zip: 6273",
+    "visa": "Visa (Austria)",
+    "visa_type:": "Daueraufenthalt",
+    "address": "Address:",
+    "location": "Leonding (Linz-Land), zip: 4060",
     "birthday": "01.02.1988",
-    "insuranceID": "5474/020188"
-  },
-  "Contacts": {
+    "insuranceID": "5474/020188",
     "telegram": "@DShreyder",
     "whatsApp": "+436504200204",
     "email": "schreyders@gmail.com",
     "mobile_phone": "+43 (0) 650-4200-204",
     "social_media": [ "instagram", "facebook" ],
-    "hobby": [ "fitness", "hicking", "languages" ]
-  },
-  "additional_data": {
-    "cover_letter": "What determines a good specialist: skills, proficiency, experience or academic degree? In the fast-paced environment as IT, I would bet on someone who loves what he does and learns constantly. And I am just such a person. I became a good professional in what I do not because I passed the exams, but because I like it. It has begun as a hobby and now I am an excellent project manager and an outstanding SEO expert. Therefore, my websites get on the first page of the Google."
+    "hobby": [ "fitness", "hicking", "languages" ],
+    "pitch_text": "What determines a good specialist: skills, proficiency, experience or academic degree? In the fast-paced environment as IT, I would bet on someone who loves what he does and learns constantly. And I am just such a person. I became a good professional in what I do not because I passed the exams, but because I like it. It has begun as a hobby and now I am an excellent project manager and an outstanding SEO expert. Therefore, my websites get on the first page of the Google."
   }
 }

@@ -1,19 +1,49 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <!-- <router-link to="/about">About</router-link> -->
-  </div>
-  <router-view/>
+  <Header :data="data" :error="error" />
+  <container>
+  <PersonalInfo :data="data" :error="error" />
+  <wrap>
+    <div id="nav">
+      <router-link :to="{ name: 'KeySkills', params: {} }">Key Skills</router-link> |
+      <!-- <router-link to="/about">About</router-link> -->
+    </div>
+    <!-- <Home /> -->
+    <router-view :data="data" :error="error"/>
+  </wrap>
+  </container>
 </template>
 
+<script type="text/javascript">
+import getInfo from '@/composables/getInfo.js'
+import Header from '@/components/Header.vue'
+import PersonalInfo from '@/components/PersonalInfo'
+
+export default {
+  name: 'App',
+  components: {
+    Header,
+    PersonalInfo
+  },
+  setup() {
+    console.log('setup()')
+    const { load, data, error } = getInfo()
+
+    load('http://localhost:3000/homepage')
+
+    return { data, error }
+  }
+}
+</script>
 <style>
-#app {
+/* @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'); */
+
+/* #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
+} */
 
 #nav {
   padding: 30px;
@@ -28,4 +58,103 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
+/*
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
+
+* {
+    transition: all 0.3s;
+    clear: both;
+}
+
+html {
+    padding: 20px;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 auto;
+    color: #444;
+    background: #eee;
+    font-size: 0.9rem;
+    font-family: sans-serif;
+    -webkit-box-shadow: 4px 2px 10px 8px #ccc;
+    -moz-box-shadow: 4px 2px 10px 8px #ccc;
+    box-shadow: 4px 2px 10px 8px #ccc;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.clearfix {
+    content: "";
+    clear: both;
+    display: table-cell;
+}
+
+a {
+    color: #000 !important;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #333 !important;
+    /* #2d9e94
+} */
+
+/* Errors/Wanings Style: Start */
+.my-notify-info, .my-notify-success, .my-notify-warning, .my-notify-error {
+    padding:10px;
+    margin:10px 0;
+
+}
+.my-notify-info:before, .my-notify-success:before, .my-notify-warning:before, .my-notify-error:before {
+    font-family:FontAwesome;
+    font-style:normal;
+    font-weight:400;
+    speak:none;
+    display:inline-block;
+    text-decoration:inherit;
+    width:1em;
+    margin-right:.2em;
+    text-align:center;
+    font-variant:normal;
+    text-transform:none;
+    line-height:1em;
+    margin-left:.2em;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale
+}
+.my-notify-info:before {
+    content:"\f05a";
+}
+.my-notify-success:before {
+    content:'\f00c';
+}
+.my-notify-warning:before {
+    content:'\f071';
+}
+.my-notify-error:before {
+    content:'\f057';
+}
+.my-notify-info {
+    color: #00529B;
+    background-color: #BDE5F8;
+}
+.my-notify-success {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+}
+.my-notify-warning {
+    color: #9F6000;
+    background-color: #FEEFB3;
+}
+.my-notify-error {
+    color: #D8000C;
+    background-color: #FFD2D2;
+}
+/* Errors/Wanings Style: END */
 </style>
