@@ -605,7 +605,7 @@ ul {
     .blockright {
         /* width: calc(100% - 360px); */
     }
-    wrap {
+    .wrap {
         width: calc(100% - 360px);
     }
 
@@ -622,7 +622,7 @@ ul {
     .blockright {
         /* max-width: 65% */
     }
-    wrap {
+    .wrap {
          max-width: 65%;
     }
 }

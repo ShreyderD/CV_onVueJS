@@ -1,11 +1,29 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import KeySkills from '../views/KeySkills.vue'
+import Experience from '../views/Experience.vue'
+import Education from '../views/Education.vue'
+import Portfolio from '../views/Portfolio.vue'
 
 const routes = [
   {
     path: '/',
     name: 'KeySkills',
     component: KeySkills
+  },
+  {
+    path: '/experience',
+    name: 'Experience',
+    component: Experience
+  },
+  {
+    path: '/education',
+    name: 'Education',
+    component: Education
+  },
+  {
+    path: '/portfolio',
+    name: 'Portfolio',
+    component: Portfolio
   }
   // {
     // path: '/about',
