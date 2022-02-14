@@ -8,10 +8,8 @@
         <router-link :to="{ name: 'Experience', params: {} }">Experience</router-link> |
         <router-link :to="{ name: 'Education', params: {} }">Education</router-link> |
         <router-link :to="{ name: 'Portfolio', params: {} }">Portfolio</router-link>
-        <!-- <router-link to="/about">About</router-link> -->
       </div>
-      <!-- <Home /> -->
-      <router-view :data="data" :error="error"/>
+      <router-view />
     </div>
   </div>
 </template>

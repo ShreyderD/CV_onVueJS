@@ -14,11 +14,8 @@
 <script>
 export default {
   name: 'Header',
-  props: [ 'data',' error' ]
+  props: [ 'data', 'error' ]
 }
-
-
-
 </script>
 
 <style lang="css" scoped>

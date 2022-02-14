@@ -10,7 +10,7 @@ import Skills from '@/components/Skills'
 
 export default {
   name: 'KeySkills',
-  props: [ 'data',' error' ],
+  props: [ 'data', 'error' ],
   components: {
     Skills
   }

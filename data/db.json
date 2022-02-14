@@ -22,8 +22,10 @@
     "pitch_title": "Cover letter",
     "pitch_text": "What determines a good specialist: skills, proficiency, experience or academic degree? In the fast-paced environment as IT, I would bet on someone who loves what he does and learns constantly. And I am just such a person. I became a good professional in what I do not because I passed the exams, but because I like it. It has begun as a hobby and now I am an excellent project manager and an outstanding SEO expert. Therefore, my websites get on the first page of the Google."
   },
-  "Keyskills": {
-    "PM_Web Developer": [
+  "keyskills": {
+    "title": "Key Skills:",
+    "pm_webdeb_title": "PM Web Developer:",
+    "pm_webdeb_skills": [
       "PM Methodology: Agile/KANBAN",
       "PM Software: Trello, Monday.com, Jira, Google Sheets",
       "HTML 5, CSS 3, Bootstrap(3,4)",

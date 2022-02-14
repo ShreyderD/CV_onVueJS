@@ -8,7 +8,8 @@ const routes = [
   {
     path: '/',
     name: 'KeySkills',
-    component: KeySkills
+    component: KeySkills,
+    props: true
   },
   {
     path: '/experience',

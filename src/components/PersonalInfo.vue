@@ -52,8 +52,6 @@
 
 <script>
 import { ref } from 'vue'
-// import getInfo from '@/composables/getInfo.js'
-
 
 export default {
   name: 'Skills',
