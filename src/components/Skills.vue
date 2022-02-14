@@ -103,12 +103,13 @@
 </template>
 
 <script>
+// import getBD from '@/composables/getBD'
+
 export default {
   name: 'Skills',
-  data() {
-    return {
-
-    }
+  setup() {
+    // const { data, error, loadData } = getBD()
+    // return {}
   }
 }
 </script>

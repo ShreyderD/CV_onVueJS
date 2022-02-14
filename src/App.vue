@@ -17,7 +17,7 @@
 </template>
 
 <script type="text/javascript">
-import getInfo from '@/composables/getInfo.js'
+import getBD from '@/composables/getBD'
 import Header from '@/components/Header.vue'
 import PersonalInfo from '@/components/PersonalInfo'
 
@@ -28,10 +28,9 @@ export default {
     PersonalInfo
   },
   setup() {
-    console.log('setup()')
-    const { load, data, error } = getInfo()
+    const { loadData, data, error } = getBD()
 
-    load('http://localhost:3000/homepage')
+    loadData('http://localhost:3000/homepage')
 
     return { data, error }
   }

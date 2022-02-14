@@ -1,25 +1,24 @@
 import { ref } from 'vue'
 
-const getInfo = () => {
+const getBD = () => {
   const data = ref(null)
   const error = ref(null)
 
-  const load = async (key) => {
+  const loadData = async (key) => {
     try{
       let request = await fetch(key)
       if(request.status !== 200 ) { throw new Error(`Couldn't fetch data from source: ${key}`)}
       data.value = await request.json()
-      console.log(data.value)
+      // console.log(data.value)
 
     } catch(err) {
       error.value = err.message
-      console.log(error.value)
+      // console.log(error.value)
     }
   }
 
-
-  return { load, data, error }
+  return { loadData, data, error }
 }
 
 
-export default getInfo
+export default getBD
