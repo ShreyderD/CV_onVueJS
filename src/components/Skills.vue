@@ -1,91 +1,64 @@
 <template lang="html">
   <div v-if="data" class="">
-
-  <div class="blockright">
-    <p class="section-title_2">{{ data.title }}</p>
-    <details open>
-        <summary class="summary">{{ data.pm_webdeb_title }}</summary>
-        <ul>
-          <li>{{ data.pm_webdeb_skills[0] }}: <b>Agile</b>/KANBAN</li>
-          <li>PM Software: Trello, <b>Monday.com</b>, Jira, Google Sheets</li>
-          <li><b>HTML 5, CSS 3, Bootstrap(3,4)</b></li>
-          <li><b>JavaScript</b> - first level</li>
-          <li>PHP - fundamentals</li>
-          <li>Mobile Web Design Optimization</li>
-          <li><strong>PIM</strong> - Content Management Automation (180.000 Products)</li>
-          <li>Google: Sheets, Docs, Slides, Drive</li>
-          <li>Microsoft: Excel, Word, SharePoint</li>
-          <li><b>SAP</b></li>
-        </ul>
-    </details>
-    <details open>
-        <summary class="summary">SEO</summary>
-        <ul>
-            <li><b>Google Webmaster</b> Tools</li>
-            <li>Google Analytics</li>
-            <li>Google Search Console</li>
-            <li>Google Optimize <b>(A/B Testing)</b></li>
-            <li>Google Tag Manager</li>
-            <li>Google Trends</li>
-            <li>Google AdWords</li>
-            <li><b>Yandex</b> Webmeister Tools</li>
-            <li>Yandex Analytic Tools (Metrika, Webvisor)</li>
-            <li><b>MOZ</b>, SEOPtimer, SEOquake</li>
-        </ul>
-    </details>
-    <details>
-        <summary class="summary">CMS</summary>
-        <ul>
-            <li>OpenCart</li>
-            <li>Magento</li>
-            <li>Wordpress</li>
-            <li>Contao</li>
-        </ul>
-    </details>
-    <details>
-        <summary class="summary">SMM</summary>
-        <ul>
-            <li>Managing Tools</li>
-            <li>Analytic Tools</li>
-            <li>Automation Tools</li>
-        </ul>
-    </details>
-    <details>
-        <summary class="summary">Additionally</summary>
-        <ul>
-            <li>Photoshop</li>
-            <li>Design: UX/UI Design, Neuro-Marketing - fundamentals</li>
-            <li>Marketing Strategy Planning</li>
-            <li>Email Marketing + Mailchimp</li>
-        </ul>
-    </details>
-    <div class="lang">
-      <p class="position_sub_titles">Languages:</p>
-      <div class="graph-container">
-          <div class="graph-item-container">
-              <div class="graph-item" title="English (B2 - IELTS)">
-                  <div class="circle-bg">
-                      <div class="text-container">
-                          <p class="text">En<br>(IELTS)</p>
-                      </div>
-                      <div class="rect-en1"></div>
-                      <div class="rect-en2"></div>
-                  </div>
-              </div>
-          </div>
-          <div class="graph-item-container">
-              <div class="graph-item" title="Russian (native speaker)">
-                  <div class="circle-bg">
-                      <div class="text-container">
-                          <p class="text">Ru</p>
-                      </div>
-                      <div class="rect-ru">
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="graph-item-container">
-              <div class="graph-item" title="German (C1)">
+    <div class="blockright">
+      <p class="section-title_2">{{ data.title }}</p>
+      <details open>
+          <summary class="summary">{{ data.pm_wd.title }}</summary>
+          <ul>
+            <li v-for="skill in data.pm_wd.skills" :key="skill">{{ skill }}</li>
+          </ul>
+      </details>
+      <details open>
+          <summary class="summary">{{ data.seo.title }}</summary>
+          <ul>
+            <li v-for="skill in data.seo.skills" :key="skill">{{ skill }}</li>
+          </ul>
+      </details>
+      <details>
+          <summary class="summary">{{ data.cms.title }}</summary>
+          <ul>
+              <li v-for="skill in data.cms.skills" :key="skill">{{ skill }}</li>
+          </ul>
+      </details>
+      <details>
+          <summary class="summary">{{ data.smm.title }}</summary>
+          <ul>
+              <li v-for="skill in data.smm.skills" :key="skill">{{ skill }}</li>
+          </ul>
+      </details>
+      <details>
+          <summary class="summary">{{ data.additional.title }}</summary>
+          <ul>
+              <li v-for="skill in data.additional.skills" :key="skill">{{ skill }}</li>
+          </ul>
+      </details>
+      <div class="lang">
+        <p class="position_sub_titles">{{ data.lang.title }}</p>
+        <div class="graph-container" v-for="skill in data.lang.skills" :key="skill.title">
+            <div class="graph-item-container">
+                <div class="graph-item" :title="skill.level">
+                    <div class="circle-bg">
+                        <div class="text-container">
+                            <p class="text">{{ skill.code }}</p>
+                        </div>
+                        <div class="rect-en1"></div>
+                        <div class="rect-en2"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="graph-item-container">
+                <div class="graph-item" :title="data.langs.skills.ru.title">
+                    <div class="circle-bg">
+                        <div class="text-container">
+                            <p class="text">Ru</p>
+                        </div>
+                        <div class="rect-ru"></div>
+                        <div class="rect-ru"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="graph-item-container">
+              <div class="graph-item" :title="data.langs.skills.de.title">
                   <div class="circle-bg">
                       <div class="text-container">
                           <p class="text">De</p>
@@ -94,7 +67,7 @@
                       <div class="rect-de2"></div>
                   </div>
               </div>
-            </div>
+            </div> -->
         </div>
       </div>
     </div>
@@ -109,7 +82,7 @@ export default {
   setup() {
     const { loadData, data, error } = getBD()
 
-    loadData('http://localhost:3000/keyskills')
+    loadData('http://localhost:3000/skills')
 
     return { data, error }
   }
@@ -117,5 +90,109 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.lang {
+    border-top: 1px dotted #ddd;
+    margin: 20px 0;
+}
+
+.graph-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.graph-item-container {
+    width: 33.33%;
+    text-align: center;
+}
+.graph-item {
+    width: 100px;
+    height: 100px;
+    /* background: #000; */
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.circle-bg {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background: #eee;
+    z-index: 0;
+}
+.circle-bg:hover .rect-de1,
+.circle-bg:hover .rect-de2,
+.circle-bg:hover .rect-en1,
+.circle-bg:hover .rect-en2,
+.circle-bg:hover .rect-ru {
+    background: #000;
+}
+.text-container {
+    display: flex;
+    position: absolute;
+    background: #fff;
+    left: 10px;
+    top: 10px;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    line-height: 80px;
+    border-radius: 50px;
+    z-index: 100;
+}
+
+.text {
+    margin: auto;
+}
+
+.rect-de1 {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    background: #777;
+    z-index: 1;
+    border-radius: 50px 0 0 50px;
+    transform: rotate(0deg);
+}
+.rect-de2 {
+    position: absolute;
+    left: 47.2%;
+    top: 11%;
+    width: 50px;
+    height: 100px;
+    background: #777;
+    z-index: 1;
+    border-radius: 0 50px 50px 0;
+    transform: rotate(26.5deg);
+}
+
+.rect-en1 {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    background: #777;
+    z-index: 1;
+    border-radius: 50px 0 0 50px;
+    transform: rotate(0deg);
+}
+.rect-en2 {
+    position: absolute;
+    left: 45.5%;
+    top: 14%;
+    width: 50px;
+    height: 100px;
+    background: #777;
+    z-index: 1;
+    border-radius: 0 50px 50px 0;
+    transform: rotate(34.5deg);
+}
+.rect-ru {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #777;
+    z-index: 1;
+    border-radius: 50px;
+}
 
 </style>
