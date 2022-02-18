@@ -8,7 +8,7 @@
             <li v-for="skill in data.pm_wd.skills" :key="skill">{{ skill }}</li>
           </ul>
       </details>
-      <details open>
+      <details>
           <summary class="summary">{{ data.seo.title }}</summary>
           <ul>
             <li v-for="skill in data.seo.skills" :key="skill">{{ skill }}</li>
@@ -26,27 +26,33 @@
               <li v-for="skill in data.smm.skills" :key="skill">{{ skill }}</li>
           </ul>
       </details>
-      <details>
+      <details open>
           <summary class="summary">{{ data.additional.title }}</summary>
           <ul>
               <li v-for="skill in data.additional.skills" :key="skill">{{ skill }}</li>
           </ul>
       </details>
-      <div class="lang">
+      <section class="lang">
         <p class="position_sub_titles">{{ data.lang.title }}</p>
-        <div class="graph-container" v-for="skill in data.lang.skills" :key="skill.title">
+        <div class="lang_wrap">
+          <div class="graph-container" v-for="skill in data.lang.skills" :key="skill.title">
             <div class="graph-item-container">
                 <div class="graph-item" :title="skill.level">
                     <div class="circle-bg">
                         <div class="text-container">
                             <p class="text">{{ skill.code }}</p>
                         </div>
-                        <div class="rect-en1"></div>
-                        <div class="rect-en2"></div>
+                        <div class="rect"></div>
+                        <div class="rect"></div>
                     </div>
                 </div>
             </div>
-            <!-- <div class="graph-item-container">
+          </div>
+            <!--
+            <div class="rect-en1"></div>
+            <div class="rect-en2"></div>
+
+            <div class="graph-item-container">
                 <div class="graph-item" :title="data.langs.skills.ru.title">
                     <div class="circle-bg">
                         <div class="text-container">
@@ -69,7 +75,7 @@
               </div>
             </div> -->
         </div>
-      </div>
+      </section>
     </div>
   </div>
 </template>
@@ -95,8 +101,12 @@ export default {
     margin: 20px 0;
 }
 
+.lang_wrap {
+  display: flex;
+  justify-content: space-around;
+}
 .graph-container {
-    display: flex;
+    /* display: flex; */
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
@@ -166,7 +176,7 @@ export default {
     transform: rotate(26.5deg);
 }
 
-.rect-en1 {
+.lang:first-child rect {
     position: absolute;
     width: 50px;
     height: 100px;

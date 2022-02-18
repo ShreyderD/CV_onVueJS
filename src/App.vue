@@ -1,6 +1,6 @@
 <template>
-  <Header :data="data" :error="error" />
   <div class="container">
+    <Header :data="data" :error="error" />
     <PersonalInfo :data="data" :error="error" />
     <div class="wrap">
       <div id="nav">

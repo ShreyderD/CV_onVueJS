@@ -75,7 +75,7 @@
       "title": "Additionally",
       "skills": [
         "Photoshop",
-        "Design: UX/UI Design, Neuro-Marketing - fundamentals",
+        "Design: UX/UI Design",
         "Marketing Strategy Planning",
         "Email Marketing + Mailchimp"
       ]
@@ -88,5 +88,40 @@
         "de": { "title": "German", "code": "De", "level": "German (C1)" }
       }
     }
+  },
+  "experience": {
+    "title": "Curriculum Vitae:",
+    "txt1": "Areas of responsibility:",
+    "jobs": [
+      { "from": "2020 March", "to": "2021 August", "title": "SAP Developer", "company": "Axians", "location": "Linz", "description": "SAP Developer in HR SAP-Modul.",
+        "aor": [
+          { "title":"Automation of operational processes via SAP",
+            "list": [
+              "Data processing: SAP",
+              "Automation of operation processes: Uploading/downloading of data",
+              "Automation of data processing processes (Background Script)"
+            ]
+          },
+          { "title":"Automation of operational processes via SAP",
+            "list": [
+              "Data processing: SAP",
+              "Automation of operation processes: Uploading/downloading of data",
+              "Automation of data processing processes (Background Script)"
+            ]
+          }
+        ]
+      },
+      { "from": "2020 March", "to": "2021 August", "title": "SAP Developer", "company": "Axians", "location": "Linz", "description": "SAP Developer in HR SAP-Modul.",
+        "aor": [
+          { "title":"Automation of operational processes via SAP",
+            "list": [
+              "Data processing: SAP",
+              "Automation of operation processes: Uploading/downloading of data",
+              "Automation of data processing processes (Background Script)"
+              ]
+          }
+        ]
+      }
+    ]
   }
 }

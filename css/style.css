@@ -59,6 +59,7 @@ header {
 .container {
   display: flex;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .clearfix {
@@ -190,15 +191,10 @@ a:hover {
 
 
 .blockright {
-    color: #000;
-    display: block;
-    background: #fff;
-    padding: 10px;
-    float: left;
-    box-sizing: border-box;
-    position: relative;
-    clear: both;
-    display: inline-block;
+  color: #000;
+  background: #fff;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .blockright a {
@@ -390,7 +386,7 @@ ul {
     font-weight: 500;
 }
 .position__description {
-    display: none;
+    /* display: none; */
     width: 100%;
     padding-left: 28%;
     margin: 0 0 10px 0;
@@ -468,7 +464,7 @@ ul {
         /* width: calc(100% - 360px); */
     }
     .wrap {
-        width: calc(100% - 360px);
+        /* width: calc(100% - 360px); */
     }
 
 }
@@ -485,7 +481,7 @@ ul {
         /* max-width: 65% */
     }
     .wrap {
-         max-width: 65%;
+         /* max-width: 65%; */
     }
 }
 

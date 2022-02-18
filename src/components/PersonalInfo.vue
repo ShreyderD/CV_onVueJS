@@ -44,7 +44,7 @@
         </div>
       </div>
     </div>
-  <div class="my-notify-error" v-else>
+  <div v-else class="my-notify-error">
     <p class="warning">{{ error }}</p>
   </div>
 

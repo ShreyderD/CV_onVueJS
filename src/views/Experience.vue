@@ -1,9 +1,12 @@
 <template lang="html">
-  <p>Experience</p>
+  <Exp />
 </template>
 
 <script>
+import Exp from '@/components/Exp'
 export default {
+  name: "Experience",
+  components: { Exp }
 }
 </script>
 
