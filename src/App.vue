@@ -1,6 +1,6 @@
 <template>
+  <Header :data="data" :error="error" />
   <div class="container">
-    <Header :data="data" :error="error" />
     <PersonalInfo :data="data" :error="error" />
     <div class="wrap">
       <div id="nav">
@@ -15,7 +15,7 @@
 </template>
 
 <script type="text/javascript">
-import getBD from '@/composables/getBD'
+import getDB from '@/composables/getDB'
 import Header from '@/components/Header.vue'
 import PersonalInfo from '@/components/PersonalInfo'
 
@@ -26,7 +26,7 @@ export default {
     PersonalInfo
   },
   setup() {
-    const { loadData, data, error } = getBD()
+    const { loadData, data, error } = getDB()
 
     loadData('http://localhost:3000/homepage')
 

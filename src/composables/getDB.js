@@ -1,6 +1,6 @@
 import { ref } from 'vue'
 
-const getBD = () => {
+const getDB = () => {
   const data = ref(null)
   const error = ref(null)
 
@@ -21,4 +21,4 @@ const getBD = () => {
 }
 
 
-export default getBD
+export default getDB

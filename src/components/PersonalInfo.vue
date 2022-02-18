@@ -55,7 +55,7 @@ import { ref } from 'vue'
 
 export default {
   name: 'Skills',
-  props: [ 'data',' error' ],
+  props: [ 'data', 'error' ],
   setup() {
     //Get my Full years
     let birthDay = new Date("01 / 02 / 1988");

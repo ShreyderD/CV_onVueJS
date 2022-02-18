@@ -81,12 +81,12 @@
 </template>
 
 <script>
-import getBD from '@/composables/getBD'
+import getDB from '@/composables/getDB'
 
 export default {
   name: 'Skills',
   setup() {
-    const { loadData, data, error } = getBD()
+    const { loadData, data, error } = getDB()
 
     loadData('http://localhost:3000/skills')
 

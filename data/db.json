@@ -93,15 +93,14 @@
     "title": "Curriculum Vitae:",
     "txt1": "Areas of responsibility:",
     "jobs": [
-      { "from": "2020 March", "to": "2021 August", "title": "SAP Developer", "company": "Axians", "location": "Linz", "description": "SAP Developer in HR SAP-Modul.",
+      { "id": 1,
+        "from": "2020 March",
+        "to": "2021 August",
+        "title": "SAP Developer",
+        "company": "Axians",
+        "location": "Linz",
+        "description": "SAP Developer in HR SAP-Modul.",
         "aor": [
-          { "title":"Automation of operational processes via SAP",
-            "list": [
-              "Data processing: SAP",
-              "Automation of operation processes: Uploading/downloading of data",
-              "Automation of data processing processes (Background Script)"
-            ]
-          },
           { "title":"Automation of operational processes via SAP",
             "list": [
               "Data processing: SAP",
@@ -111,14 +110,30 @@
           }
         ]
       },
-      { "from": "2020 March", "to": "2021 August", "title": "SAP Developer", "company": "Axians", "location": "Linz", "description": "SAP Developer in HR SAP-Modul.",
+      { "id": 2,
+        "from": "2019 June",
+        "to": "2020 February",
+        "title": "Development B2B-platform & Data Proccessing",
+        "company": "Swarovski",
+        "location": "Wattens",
+        "description": "Design-Prototypes-Database development, Data Proccessing.",
         "aor": [
-          { "title":"Automation of operational processes via SAP",
+          { "title": "VBA Scripts development for:",
             "list": [
-              "Data processing: SAP",
-              "Automation of operation processes: Uploading/downloading of data",
-              "Automation of data processing processes (Background Script)"
-              ]
+              "SAP-Excel Integration",
+              "Automation of data processing within Excel",
+              "VBA custom Functions",
+              "Outlook e-mail traffic automation"
+            ]
+          },
+          { "title": "Application and testing of the integration tools for SAP and Excel from third-party providers, such as \"Process Runner\" from the international company \"Innowera\"",
+            "list": []
+          },
+          { "title": "Supplier requests: e-mail and phone",
+            "list": []
+          },
+          { "title": "SAP MM – data Review and correction (manually)",
+            "list": []
           }
         ]
       }
