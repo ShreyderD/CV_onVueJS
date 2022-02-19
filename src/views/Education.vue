@@ -1,9 +1,13 @@
 <template lang="html">
-  <p>Education</p>
+  <Edu />
 </template>
 
 <script>
+import Edu from '@/components/Edu.vue'
+
 export default {
+  name: "Education",
+  components: { Edu }
 }
 </script>
 

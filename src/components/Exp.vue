@@ -21,6 +21,9 @@
         </div>
     </div>
   </div>
+  <div v-else class="my-notify-error">
+    <p class="warning">{{ error }}</p>
+  </div>
 </template>
 
 <script>

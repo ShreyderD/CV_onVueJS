@@ -93,7 +93,7 @@
     "title": "Curriculum Vitae:",
     "txt1": "Areas of responsibility:",
     "jobs": [
-      { "id": 1,
+      { "id": 13,
         "from": "2020 March",
         "to": "2021 August",
         "title": "SAP Developer",
@@ -110,7 +110,7 @@
           }
         ]
       },
-      { "id": 2,
+      { "id": 12,
         "from": "2019 June",
         "to": "2020 February",
         "title": "Development of B2B-platform & Data Proccessing",
@@ -137,7 +137,7 @@
           }
         ]
       },
-      { "id": 3,
+      { "id": 11,
         "from": "2019 October",
         "to": "2020 March",
         "title": "Product Owner",
@@ -156,7 +156,7 @@
           }
         ]
       },
-      { "id": 4,
+      { "id": 10,
         "from": "2019 January",
         "to": "2019 June",
         "title": "IT Freelance",
@@ -173,7 +173,7 @@
           }
         ]
       },
-      { "id": 5,
+      { "id": 9,
         "from": "2017 January",
         "to": "2018 May",
         "title": "IT Project Manager/SEO",
@@ -197,7 +197,7 @@
           }
         ]
       },
-      { "id": 6,
+      { "id": 8,
         "from": "2016 July",
         "to": "2016 December",
         "title": "Merchandiser",
@@ -232,7 +232,7 @@
           }
         ]
       },
-      { "id": 8,
+      { "id": 6,
         "from": "2014 June",
         "to": "2016 June",
         "title": "CEO and Owner of Lux-Exchange.com",
@@ -257,7 +257,7 @@
           }
         ]
       },
-      { "id": 9,
+      { "id": 5,
         "from": "2013 December",
         "to": "2014 May",
         "title": "Independent web search engine consultant",
@@ -271,7 +271,7 @@
           }
         ]
       },
-      { "id": 10,
+      { "id": 4,
         "from": "2013 June",
         "to": "2013 November",
         "title": "Director's Assistant",
@@ -289,7 +289,7 @@
           }
         ]
       },
-      { "id": 11,
+      { "id": 3,
         "from": "2013 February",
         "to": "2013 March",
         "title": "Mystery Buyer",
@@ -303,7 +303,7 @@
           }
         ]
       },
-      { "id": 12,
+      { "id": 2,
         "from": "2008 September",
         "to": "2012 September",
         "title": "Trader",
@@ -317,7 +317,7 @@
           }
         ]
       },
-      { "id": 13,
+      { "id": 1,
         "from": "2008 March",
         "to": "2008 September",
         "title": "Waiter",
@@ -326,6 +326,95 @@
         "location": "Perm, Russia",
         "description": "As a student in Russia, I have been working in a restaurant.",
         "aor": [
+          { "title": "",
+            "list": []
+          }
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": "Education:",
+    "txt1": "Course overview",
+    "courses": [
+      { "id": 5,
+        "title": "Web-Developer",
+        "desctiption": "Web-Developer: HTML/CSS/PHP",
+        "organisation": "Geekbrains",
+        "link": "https://gb.ru/",
+        "location": "online",
+        "from": "2018",
+        "to": "2018",
+        "topics": [
+          { "title": "HTML",
+            "list": [ "HTML/CSS", "HTML5/CSS3" ]
+          },
+          { "title": "JavaScript",
+            "list": [ "JavaScript level 1", "JavaScript level 2" ]
+          },
+          { "title": "PHP",
+            "list": [ "PHP level 1", "PHP level 2" ]
+          },
+          { "title": "Database Basics",
+            "list": []
+          }
+        ]
+      },
+      { "id": 4,
+        "title": "Online Marketing",
+        "desctiption": "WEB- und Social Media-Marketing Management",
+        "organisation": "WiFi Steiermark",
+        "link": "https://www.stmk.wifi.at/kurs/31950x-web-und-social-media-marketing-management",
+        "location": "Graz, Austria",
+        "from": "2016",
+        "to": "2016",
+        "topics": [
+          { "title": "SEM",
+            "list": [
+              "SEO: On-Page, Off-Page optimisation, Linkbuilding, Microdata...",
+              "SEA: Google Adwords"
+            ]
+          }
+        ]
+      },
+      { "id": 3,
+        "title": "Associate's degree in Business Administration",
+        "desctiption": "Several courses on the Business Administration faculty. The study has been interrupted after 3 years of education, because I have decided to change my career path and go study IT.",
+        "organisation": "Karl-Franzens University",
+        "link": "https://www.stmk.wifi.at/kurs/31950x-web-und-social-media-marketing-management",
+        "location": "Graz, Austria",
+        "from": "2012",
+        "to": "2015",
+        "topics": [
+          { "title": "",
+            "list": []
+          }
+        ]
+      },
+      { "id": 2,
+        "title": "German courses",
+        "desctiption": "German courses at Vorstudienlehrgang (School at the University)",
+        "organisation": "School by the Karl-Franzens University",
+        "link": "https://www.stmk.wifi.at/kurs/31950x-web-und-social-media-marketing-management",
+        "location": "Graz, Austria",
+        "from": "2010",
+        "to": "2012",
+        "topics": [
+          { "title": "German",
+            "list": [ "A1", "A2", "B1", "B2/C1" ]
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "title": "Economics",
+        "desctiption": "Associate's degree in Business Administration and Master of Economics",
+        "organisation": "Finished 6 semesters with certificate. Then I moved to Austria, where I continued the study.",
+        "link": "https://www.stmk.wifi.at/kurs/31950x-web-und-social-media-marketing-management",
+        "location": "Perm, Russia",
+        "from": "2005",
+        "to": "2009",
+        "topics": [
           { "title": "",
             "list": []
           }

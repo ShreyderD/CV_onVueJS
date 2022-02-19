@@ -4,10 +4,38 @@
     <PersonalInfo :data="data" :error="error" />
     <div class="wrap">
       <div id="nav">
-        <router-link :to="{ name: 'KeySkills', params: {} }">Key Skills</router-link> |
-        <router-link :to="{ name: 'Experience', params: {} }">Experience</router-link> |
-        <router-link :to="{ name: 'Education', params: {} }">Education</router-link> |
-        <router-link :to="{ name: 'Portfolio', params: {} }">Portfolio</router-link>
+        <div class="ancors-block">
+            <div class="ancors-container">
+              <div class="ancor-item">
+                  <div class="item-box">
+                      <i class="icon-settings-streamline-2"></i>
+                      <p class="ancor-text"><router-link :to="{ name: 'KeySkills', params: {} }">#Key Skills</router-link></p>
+                  </div>
+              </div>
+                <div class="ancor-item">
+                    <div class="item-box">
+                        <i class="icon-settings-streamline-2"></i>
+                        <p class="ancor-text"><router-link :to="{ name: 'Experience', params: {} }">#Experience</router-link></p>
+                    </div>
+                </div>
+                <div class="ancor-item">
+                    <div class="item-box">
+                        <i class="icon-earth-globe-streamline"></i>
+                        <p class="ancor-text"><router-link :to="{ name: 'Education', params: {} }">#Education</router-link></p>
+                    </div>
+                </div>
+                <div class="ancor-item">
+                    <div class="item-box">
+                        <i class="icon-picture-streamline-1"></i>
+                        <p class="ancor-text"><router-link :to="{ name: 'Portfolio', params: {} }">#Portfolio</router-link></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <router-link :to="{ name: 'KeySkills', params: {} }">#Key Skills</router-link> |
+        <router-link :to="{ name: 'Experience', params: {} }">#Experience</router-link> |
+        <router-link :to="{ name: 'Education', params: {} }">#Education</router-link> |
+        <router-link :to="{ name: 'Portfolio', params: {} }">#Portfolio</router-link> -->
       </div>
       <router-view />
     </div>
