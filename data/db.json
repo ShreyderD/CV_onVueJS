@@ -98,7 +98,7 @@
         "to": "2021 August",
         "title": "SAP Developer",
         "company": "Axians",
-        "location": "Linz",
+        "location": "Linz, Austria",
         "description": "SAP Developer in HR SAP-Modul.",
         "aor": [
           { "title":"Automation of operational processes via SAP",
@@ -113,9 +113,9 @@
       { "id": 2,
         "from": "2019 June",
         "to": "2020 February",
-        "title": "Development B2B-platform & Data Proccessing",
+        "title": "Development of B2B-platform & Data Proccessing",
         "company": "Swarovski",
-        "location": "Wattens",
+        "location": "Wattens, Austria",
         "description": "Design-Prototypes-Database development, Data Proccessing.",
         "aor": [
           { "title": "VBA Scripts development for:",
@@ -133,6 +133,200 @@
             "list": []
           },
           { "title": "SAP MM – data Review and correction (manually)",
+            "list": []
+          }
+        ]
+      },
+      { "id": 3,
+        "from": "2019 October",
+        "to": "2020 March",
+        "title": "Product Owner",
+        "company": "PROPSTER - Sonderwunsch Meister GmbH",
+        "link": "https://propster.tech/en/",
+        "location": "Vienna, Austria",
+        "description": "IT Project Manager in the startup. The projects aims to develop online platform to optimise the managing of property developments to boost revenues, digitize processes and improve the interaction with your buyers, investors and land owners.",
+        "aor": [
+          { "title": "Project Management",
+            "list": [
+              "Backlog Management (Jira)",
+              "Stories Discovery and documentation of the new features of the Platfom",
+              "Sprints Planing (Agile: Scrum/Kanban)",
+              "Ongoing support of the platform - Product Database Management (Bulk Import/Export), QA-Testing"
+            ]
+          }
+        ]
+      },
+      { "id": 4,
+        "from": "2019 January",
+        "to": "2019 June",
+        "title": "IT Freelance",
+        "company": "different companies",
+        "link": "https://propster.tech/en/",
+        "location": "Online",
+        "description": "IT Project Manager in the startup. The projects aims to develop online platform to optimise the managing of property developments to boost revenues, digitize processes and improve the interaction with your buyers, investors and land owners.",
+        "aor": [
+          { "title": "Web Development",
+            "list": []
+          },
+          { "title": "SEO Consultation",
+            "list": []
+          }
+        ]
+      },
+      { "id": 5,
+        "from": "2017 January",
+        "to": "2018 May",
+        "title": "IT Project Manager/SEO",
+        "company": "Rupertus Pharmacy",
+        "link": "",
+        "location": "Tirol, Austria",
+        "description": "Support an existing online Shop and develop a new one with more than 180.000 products.",
+        "aor": [
+          { "title": "Project Management of the new online shop.",
+            "list": [
+              "Web Developing of online pharmacy shop with over 180.000 products (www.yetipharm.com): from Technical Task to Development, Products/Content initial filling, Testing and Design!",
+              "Online Marketing/SEO: microdata, schema.org, speed improvements...",
+              "Google Analytics",
+              "Google Webmaster",
+              "Mobile Web Design Optimization",
+              "Social Marketing: Strategie Planning",
+              "Analysis of the competitors",
+              "E-Mail Marketing: Design, Layout coding, Analytics",
+              "Content Management: 180.000 Products"
+            ]
+          }
+        ]
+      },
+      { "id": 6,
+        "from": "2016 July",
+        "to": "2016 December",
+        "title": "Merchandiser",
+        "company": "BMS GmbH",
+        "link": "",
+        "location": "Graz, Austria",
+        "description": "Merchandising in 12 Libro Branches in Styria (State of Austria)",
+        "aor": [
+          { "title": "",
+            "list": []
+          }
+        ]
+      },
+      { "id": 7,
+        "from": "2016 February",
+        "to": "2016 April",
+        "title": "Online Shop Manager/SEO Expert",
+        "company": "GVS Austria e.U.",
+        "link": "",
+        "location": "Vienna, Austria",
+        "description": "Online Shop Manager/SEO. Development of an online platform. Search Engine Optimization. Backlog Management and Communication with the development team.",
+        "aor": [
+          { "title": "Online Shop Manager",
+            "list": [
+              "Design updates",
+              "Content Management",
+              "Trends recognition",
+              "SEO",
+              "Website and online shop analytics: traffic, trends,  market requirements, competitor analysis.",
+              "Google Adwords"
+            ]
+          }
+        ]
+      },
+      { "id": 8,
+        "from": "2014 June",
+        "to": "2016 June",
+        "title": "CEO and Owner of Lux-Exchange.com",
+        "company": "Lux Exchange e.U.",
+        "link": "",
+        "location": "Vienna, Austria",
+        "description": "Lux-Exchange.com - was an ambitious startup. Our goal was to gather together the most expensive and extraordinary products and services on one online platform. As an owner I was responsible for development of the online shop, communication with partners and others.",
+        "aor": [
+          { "title": "Project Management",
+            "list": [
+              "Marketing",
+              "Online Marketing",
+              "Web Design",
+              "Team coordination (remotely): programmer and designer",
+              "Negotiations with the partners (manufacturers)",
+              "Analysis of the competitors",
+              "Marketing Strategy Planning",
+              "SEO",
+              "Copywriting in 3 languages: English, German, Russian",
+              "Translation (German, English and Russian)"
+            ]
+          }
+        ]
+      },
+      { "id": 9,
+        "from": "2013 December",
+        "to": "2014 May",
+        "title": "Independent web search engine consultant",
+        "company": "Appen Butler-Hill",
+        "link": "",
+        "location": "Remotely, USA",
+        "description": "Monitoring and Evaluation of Web Content... (NDA).",
+        "aor": [
+          { "title": "",
+            "list": []
+          }
+        ]
+      },
+      { "id": 10,
+        "from": "2013 June",
+        "to": "2013 November",
+        "title": "Director's Assistant",
+        "company": "ITV GmbH",
+        "link": "",
+        "location": "Graz, Austria",
+        "description": "Basic assistance in daily sale's routine.",
+        "aor": [
+          { "title": "Sales Supporter",
+            "list": [
+              "Negotiations with the customers",
+              "Offer calculations",
+              "Initial accounting"
+            ]
+          }
+        ]
+      },
+      { "id": 11,
+        "from": "2013 February",
+        "to": "2013 March",
+        "title": "Mystery Buyer",
+        "company": "Bare International",
+        "link": "www.bareinternational.com",
+        "location": "Graz, Austria",
+        "description": "Visit various shops, cafes and restaurants to check if the advisors are doing their job properly - as the rules say. During work I have reached the 9 professional level (9 out of 10). Kafes and restaurants in order to check the whether the consultants do their job properly - as it says in regulations. Doing the job I have reached 9-th professional level (9 of 10).",
+        "aor": [
+          { "title": "",
+            "list": []
+          }
+        ]
+      },
+      { "id": 12,
+        "from": "2008 September",
+        "to": "2012 September",
+        "title": "Trader",
+        "company": "Alor Broker",
+        "link": "www.alorbroker.ru",
+        "location": "Perm, Russia",
+        "description": "We have developed new arbitrage strategies on Russian shares market and traded according to the strategies.",
+        "aor": [
+          { "title": "",
+            "list": []
+          }
+        ]
+      },
+      { "id": 13,
+        "from": "2008 March",
+        "to": "2008 September",
+        "title": "Waiter",
+        "company": "Amaks Hotels",
+        "link": "www.amaks-hotels.ru",
+        "location": "Perm, Russia",
+        "description": "As a student in Russia, I have been working in a restaurant.",
+        "aor": [
+          { "title": "",
             "list": []
           }
         ]

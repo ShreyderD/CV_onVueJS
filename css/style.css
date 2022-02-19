@@ -350,7 +350,7 @@ ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* margin-top: 1rem; */
+    padding: 0 40px 0 0;
     border-bottom: 1px dotted rgba(204, 204, 204, 1);
 }
 
