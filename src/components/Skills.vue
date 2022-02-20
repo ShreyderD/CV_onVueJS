@@ -1,6 +1,6 @@
 <template lang="html">
   <div v-if="data" class="blockright">
-    <div class="blockright">
+    <div>
       <p class="section-title_2">{{ data.title }}</p>
       <details open>
           <summary class="summary">{{ data.pm_wd.title }}</summary>
@@ -42,52 +42,24 @@
                         <div class="text-container">
                             <p class="text">{{ skill.code }}</p>
                         </div>
-                        <div class="rect"></div>
-                        <div class="rect"></div>
                     </div>
                 </div>
             </div>
           </div>
-            <!--
-            <div class="rect-en1"></div>
-            <div class="rect-en2"></div>
-
-            <div class="graph-item-container">
-                <div class="graph-item" :title="data.langs.skills.ru.title">
-                    <div class="circle-bg">
-                        <div class="text-container">
-                            <p class="text">Ru</p>
-                        </div>
-                        <div class="rect-ru"></div>
-                        <div class="rect-ru"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="graph-item-container">
-              <div class="graph-item" :title="data.langs.skills.de.title">
-                  <div class="circle-bg">
-                      <div class="text-container">
-                          <p class="text">De</p>
-                      </div>
-                      <div class="rect-de1"></div>
-                      <div class="rect-de2"></div>
-                  </div>
-              </div>
-            </div> -->
         </div>
       </section>
     </div>
   </div>
-  <div v-else class="my-notify-error">
-    <p class="warning">{{ error }}</p>
-  </div>
+  <Error :error="error" />
 </template>
 
 <script>
 import getDB from '@/composables/getDB'
+import Error from '@/components/Error'
 
 export default {
   name: 'Skills',
+  components: { Error },
   setup() {
     const { loadData, data, error } = getDB()
 
@@ -126,20 +98,6 @@ export default {
     overflow: hidden;
 }
 
-.circle-bg {
-    width: 100px;
-    height: 100px;
-    border-radius: 100px;
-    background: #eee;
-    z-index: 0;
-}
-.circle-bg:hover .rect-de1,
-.circle-bg:hover .rect-de2,
-.circle-bg:hover .rect-en1,
-.circle-bg:hover .rect-en2,
-.circle-bg:hover .rect-ru {
-    background: #000;
-}
 .text-container {
     display: flex;
     position: absolute;
@@ -158,54 +116,49 @@ export default {
     margin: auto;
 }
 
-.rect-de1 {
-    position: absolute;
-    width: 50px;
-    height: 100px;
-    background: #777;
-    z-index: 1;
-    border-radius: 50px 0 0 50px;
-    transform: rotate(0deg);
+.circle-bg {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  background: #eee;
+  z-index: 0;
+  position: relative;
 }
-.rect-de2 {
-    position: absolute;
-    left: 47.2%;
-    top: 11%;
-    width: 50px;
-    height: 100px;
-    background: #777;
-    z-index: 1;
-    border-radius: 0 50px 50px 0;
-    transform: rotate(26.5deg);
+.circle-bg::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 100px;
+  background: #777;
+  z-index: 1;
+  border-radius: 50px 0 0 50px;
+  transform: rotate(0deg);
+  left: 0;
+  top: 0;
 }
 
-.lang:first-child rect {
-    position: absolute;
-    width: 50px;
-    height: 100px;
-    background: #777;
-    z-index: 1;
-    border-radius: 50px 0 0 50px;
-    transform: rotate(0deg);
+.circle-bg::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 50px;
+  height: 100px;
+  background: #777;
+  border-radius: 0 50px 50px 0;
+  transform: rotate(0deg) translate(0%, 0%);
 }
-.rect-en2 {
-    position: absolute;
-    left: 45.5%;
-    top: 14%;
-    width: 50px;
-    height: 100px;
-    background: #777;
-    z-index: 1;
-    border-radius: 0 50px 50px 0;
-    transform: rotate(34.5deg);
+
+.graph-container:first-child .circle-bg::after {
+  transform: rotate(34.5deg) translate(7.5%, 14%);
 }
-.rect-ru {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    background: #777;
-    z-index: 1;
-    border-radius: 50px;
+
+.graph-container:nth-child(3) .circle-bg::after {
+  transform: rotate(26.5deg) translate(5%, 11%);
+}
+
+.circle-bg:hover:after,
+.circle-bg:hover:before {
+  background: #000;
 }
 
 </style>

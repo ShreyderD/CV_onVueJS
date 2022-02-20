@@ -2,7 +2,7 @@
     <div v-if="data" class="blockleft">
       <div class="introduction">
         <div class="intro_wrap">
-          <div class="introduction__text">
+          <div class="personal_data">
             <p class="section-title_1">{{ personal_info }}</p>
             <ul class="pdatalist">
               <li><b>{{ data.visa }}</b> {{ data.visatype }}</li>
@@ -46,17 +46,16 @@
         </div>
       </div>
     </div>
-  <div v-else class="my-notify-error">
-    <p class="warning">{{ error }}</p>
-  </div>
-
+    <Error :error="error" />
 </template>
 
 <script>
 import { ref } from 'vue'
+import Error from '@/components/Error'
 
 export default {
   name: 'Skills',
+  components: { Error },
   props: [ 'data', 'error' ],
   setup() {
     //Get my Full years

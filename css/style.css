@@ -85,12 +85,17 @@ a:hover {
     display: inline-block;
 }
 
+.intro_wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .introduction {
     overflow: hidden;
 }
 
-.introduction__text {
-    margin: auto;
+.personal_data {
+    margin: 0 40px 0 0;
 }
 
 .pdatalist {
@@ -192,7 +197,6 @@ a:hover {
 
 .blockright {
   color: #000;
-  background: #fff;
   padding: 10px;
   box-sizing: border-box;
 }
@@ -464,6 +468,8 @@ ul {
         /* width: calc(100% - 360px); */
     }
     .wrap {
+      background: #fff;
+      padding: 0 0 0 20px;
         /* width: calc(100% - 360px); */
     }
 
@@ -471,25 +477,21 @@ ul {
 
 @media screen and (max-width: 1600px) {
     .blockleft {
-        max-width: 35%;
-        position: relative;
-        padding-left: 1.5em;
-        padding-right: 1.5em;
+      min-width: 30%;
+      position: relative;
+      padding-left: 1em;
     }
 
     .blockright {
         /* max-width: 65% */
     }
     .wrap {
-         /* max-width: 65%; */
+         width: 100%;
     }
 }
 
 
 @media screen and (max-width: 1000px) {
-    .intro_wrap {
-      display: flex;
-    }
     .container {
         max-width: 100%;
         flex-wrap: wrap;
