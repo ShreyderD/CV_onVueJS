@@ -8,7 +8,7 @@
             <div class="ancors-container">
               <div class="ancor-item">
                   <div class="item-box">
-                      <i class="icon-settings-streamline-2"></i>
+                      <i class="icon-ios-list-outline"></i>
                       <p class="ancor-text"><router-link :to="{ name: 'KeySkills', params: {} }">#Key Skills</router-link></p>
                   </div>
               </div>
@@ -32,12 +32,10 @@
                 </div>
             </div>
         </div>
-        <!-- <router-link :to="{ name: 'KeySkills', params: {} }">#Key Skills</router-link> |
-        <router-link :to="{ name: 'Experience', params: {} }">#Experience</router-link> |
-        <router-link :to="{ name: 'Education', params: {} }">#Education</router-link> |
-        <router-link :to="{ name: 'Portfolio', params: {} }">#Portfolio</router-link> -->
       </div>
-      <router-view />
+      <div class="blockright">
+        <router-view />
+      </div>
     </div>
   </div>
 </template>
@@ -95,43 +93,6 @@ export default {
     clear: both;
 }
 
-html {
-    padding: 20px;
-    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0 auto;
-    color: #444;
-    background: #eee;
-    font-size: 0.9rem;
-    font-family: sans-serif;
-    -webkit-box-shadow: 4px 2px 10px 8px #ccc;
-    -moz-box-shadow: 4px 2px 10px 8px #ccc;
-    box-shadow: 4px 2px 10px 8px #ccc;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.container {
-    margin: 0 auto;
-}
-
-.clearfix {
-    content: "";
-    clear: both;
-    display: table-cell;
-}
-
-a {
-    color: #000 !important;
-    cursor: pointer;
-}
-
-a:hover {
-    color: #333 !important;
-    /* #2d9e94
-} */
 
 /* Errors/Wanings Style: Start */
 .my-notify-info, .my-notify-success, .my-notify-warning, .my-notify-error {

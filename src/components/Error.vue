@@ -1,6 +1,6 @@
 <template lang="html">
   <div v-if="error" class="my-notify-error">
-    <p class="warning">{{ error }}</p>
+    <p class="warning">{{ error }}!</p>
   </div>
 </template>
 

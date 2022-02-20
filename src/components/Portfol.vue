@@ -1,5 +1,5 @@
 <template lang="html">
-  <div v-if="data" class="blockright">
+  <div v-if="data">
     <p class="section-title_2" id="portfolio">{{ data.title }}</p>
     <ul>
         <li v-for="project in data.projects" :key="project.id">

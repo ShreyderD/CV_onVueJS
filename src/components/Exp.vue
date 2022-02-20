@@ -1,9 +1,9 @@
 <template lang="html">
-  <div v-if="data" class="blockright">
+  <div v-if="data">
     <p class="section-title_2" id="experience">{{ data.title }}</p>
     <div v-for="job in data.jobs" :key="job.id" @click="this.showPosition = !this.showPosition" class="position">
         <div class="period">
-            <div class="center">{{ job.from }}<br />{{ job.to }}</div>
+            <div class="center">{{ job.from }} <br />{{ job.to }}</div>
         </div>
         <div class="position_title"><strong>{{ job.title }}</strong> ({{ job.company }}, {{ job.location }})</div>
         <div v-show="showPosition" class="position__description">
