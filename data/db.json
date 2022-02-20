@@ -421,5 +421,45 @@
         ]
       }
     ]
+  },
+  "portfolio": {
+    "title": "Portfolio:",
+    "projects": [
+      {
+        "id": 4,
+        "title": "JavaScript",
+        "list": [
+          { "description": "Snake (browser game)", "link": "http://cv.lux-exchange.com/portfolio/waxom_landingpage/" },
+          { "description": "Battleship (browser game)", "link": "http://cv.lux-exchange.com/portfolio/waxom_landingpage/" },
+          { "description": "TicTacToe (browser game)", "link": "http://cv.lux-exchange.com/portfolio/waxom_landingpage/" },
+          { "description": "Chess Table", "link": "http://cv.lux-exchange.com/portfolio/waxom_landingpage/" }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "VueJS2/3",
+        "list": [
+          { "description": "VueJS-2: Simple Table Overview", "link": "https://kv9hg.csb.app/" },
+          { "description": "VueJS-3: ReactionTimer - webNinja", "link": "https://hy6yqr.csb.app/" },
+          { "description": "VueJS-3: Online CV", "link": "/#" }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "HTML5/CSS3",
+        "list": [
+          { "description": "HTML5/CSS3 - responsive design", "link": "http://cv.lux-exchange.com/portfolio/waxom_landingpage/" }
+        ]
+      },
+      {
+        "id": 1,
+        "title": "OpenCart (online shop CMS)",
+        "list": [
+          { "description": "BlogStore.io - platform for bloggers and vloggers", "link": "https://www.blogstore.io/" },
+          { "description": "Lux Exchange - online shop for the millionairs", "link": "http://lux-exchange.com/" },
+          { "description": "Online Pharmacy Shop (180.000 Products)", "link": "#" }
+        ]
+      }
+    ]
   }
 }

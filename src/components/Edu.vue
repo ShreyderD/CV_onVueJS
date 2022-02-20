@@ -1,12 +1,12 @@
 <template lang="html">
-  <div v-if="data" class="">
+  <div v-if="data" class="blockright">
     <p class="section-title_2" id="study">{{ data.title }}</p>
     <div v-for="course in data.courses" :key="course.id" class="position">
       <div class="period">
           <div class="center">{{ course.from }} - {{ course.to }}</div>
       </div>
       <div class="position_title"><strong>{{ course.title }}</strong> ({{ course.desctiption }})</div>
-      <div class="position__description">
+      <div v-if="showPosition" class="position__description">
         <span>{{ course.desctiption }} (<a :href="course.link" target="_blank" rel="nofollow noreferrer noopener">course link</a>)</span>
         <div v-if="course.topics[0].title">
           <p style="font-weight: 700; margin-top: 10px;">{{ data.txt1 }}:</p>
@@ -31,6 +31,11 @@ import getDB from '@/composables/getDB'
 
 export default {
   name: "Edu",
+  data() {
+    return {
+      showPosition: false
+    }
+  },
   setup() {
     const { loadData, data, error } = getDB()
 

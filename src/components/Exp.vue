@@ -1,5 +1,5 @@
 <template lang="html">
-  <div v-if="data" class="">
+  <div v-if="data" class="blockright">
     <p class="section-title_2" id="experience">{{ data.title }}</p>
     <div v-for="job in data.jobs" :key="job.id" @click="this.showPosition = !this.showPosition" class="position">
         <div class="period">

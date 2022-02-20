@@ -49,6 +49,7 @@ header {
     text-align: right;
 }
 
+
 .introduction__photo {
     margin: auto 0;
     border-radius: 20px;
@@ -59,7 +60,6 @@ header {
 .container {
   display: flex;
   margin: 0 auto;
-  flex-wrap: wrap;
 }
 
 .clearfix {
@@ -486,9 +486,13 @@ ul {
 }
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
+    .intro_wrap {
+      display: flex;
+    }
     .container {
         max-width: 100%;
+        flex-wrap: wrap;
     }
 
     .blockleft,

@@ -1,5 +1,5 @@
 <template lang="html">
-  <div v-if="data" class="">
+  <div v-if="data" class="blockright">
     <div class="blockright">
       <p class="section-title_2">{{ data.title }}</p>
       <details open>

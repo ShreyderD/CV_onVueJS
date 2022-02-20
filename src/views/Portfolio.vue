@@ -1,9 +1,13 @@
 <template lang="html">
-  <p>Portfolio</p>
+  <Portfol />
 </template>
 
 <script>
+import Portfol from '@/components/Portfol'
+
 export default {
+  name: 'Portfolio',
+  components: { Portfol }
 }
 </script>
 
