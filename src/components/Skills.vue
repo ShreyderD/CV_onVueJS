@@ -2,34 +2,10 @@
   <div v-if="data">
     <div>
       <p class="section-title_2">{{ data.title }}</p>
-      <details open>
-          <summary class="summary">{{ data.pm_wd.title }}</summary>
+      <details v-for="skill in data.skills" :open="skill.open" :key="skill.title">
+          <summary class="summary">{{ skill.title }}</summary>
           <ul>
-            <li v-for="skill in data.pm_wd.skills" :key="skill">{{ skill }}</li>
-          </ul>
-      </details>
-      <details>
-          <summary class="summary">{{ data.seo.title }}</summary>
-          <ul>
-            <li v-for="skill in data.seo.skills" :key="skill">{{ skill }}</li>
-          </ul>
-      </details>
-      <details>
-          <summary class="summary">{{ data.cms.title }}</summary>
-          <ul>
-              <li v-for="skill in data.cms.skills" :key="skill">{{ skill }}</li>
-          </ul>
-      </details>
-      <details>
-          <summary class="summary">{{ data.smm.title }}</summary>
-          <ul>
-              <li v-for="skill in data.smm.skills" :key="skill">{{ skill }}</li>
-          </ul>
-      </details>
-      <details open>
-          <summary class="summary">{{ data.additional.title }}</summary>
-          <ul>
-              <li v-for="skill in data.additional.skills" :key="skill">{{ skill }}</li>
+            <li v-for="item in skill.skills" :key="skill">{{ item }}</li>
           </ul>
       </details>
       <section class="lang">

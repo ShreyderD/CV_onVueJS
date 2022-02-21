@@ -1,12 +1,13 @@
 <template lang="html">
   <div v-if="data">
     <p class="section-title_2" id="experience">{{ data.title }}</p>
-    <div v-for="job in data.jobs" :key="job.id" @click="this.showPosition = !this.showPosition" class="position">
-        <div class="period">
-            <div class="center">{{ job.from }} <br />{{ job.to }}</div>
-        </div>
-        <div class="position_title"><strong>{{ job.title }}</strong> ({{ job.company }}, {{ job.location }})</div>
-        <div v-show="showPosition" class="position__description">
+    <div v-for="job in data.jobs" :key="job.id" class="position">
+      <div class="period">
+          <div class="center">{{ job.from }} <br />{{ job.to }}</div>
+      </div>
+      <div class="position_title" @click="showList(job.id)"><strong>{{ job.title }}</strong> ({{ job.company }}, {{ job.location }})</div>
+      <transition name="slide-fade">
+        <div v-if="job.id === activeID" class="position__description">
           <p>{{ job.description }}</p>
           <div v-if="job.aor[0].title" class="responsabilities">
               <p class="position_sub_titles">{{ data.txt1 }}</p>
@@ -19,6 +20,7 @@
               </ul>
           </div>
         </div>
+      </transition>
     </div>
   </div>
   <Error :error="error" />
@@ -40,7 +42,16 @@ export default {
   },
   data() {
     return {
-      showPosition: false
+      activeID: 0
+    }
+  },
+  methods: {
+    showList(id) {
+      if (this.activeID === id) {
+        this.activeID = 0
+      } else {
+        this.activeID = id
+      }
     }
   }
 }

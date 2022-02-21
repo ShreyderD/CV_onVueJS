@@ -3,14 +3,13 @@
     "name": "Dmitriy",
     "surname": "Shreyder",
     "profession": "IT Projekt Manager/Web-Developer",
-    "visa": "Visa (Austria)",
-    "visa_type:": "Daueraufenthalt",
-    "address": "Address",
-    "location": "Leonding (Linz), zip: 4060",
+    "personaldata": [
+      { "title": "Visa (Austria)", "text": "Permanent residence" },
+      { "title": "Address", "text": "Leonding (Linz), zip: 4060" },
+      { "title": "Insurance ID", "text": "5474/020188" }
+    ],
     "birthday": "Birthday",
     "birthday_date": "01.02.1988",
-    "insurance": "Insurance ID",
-    "insuranceID": "5474/020188",
     "telegram": "@DShreyder",
     "whatsApp": "+436504200204",
     "email": "schreyders@gmail.com",
@@ -24,62 +23,65 @@
   },
   "skills": {
     "title": "Key Skills:",
-    "pm_wd": {
-      "title": "Project Management & Web Developement",
-      "skills": [
-        "PM Methodology: Agile/KANBAN",
-        "PM Software: Trello, Monday.com, Jira, Google Sheets",
-        "HTML 5, CSS 3, Bootstrap(3,4)",
-        "JavaScript - first level",
-        "PHP - fundamentals",
-        "Mobile Web Design Optimization",
-        "PIM - Content Management Automation (180.000 Products)",
-        "Google: Sheets, Docs, Slides, Drive",
-        "Microsoft: Excel, Word, SharePoint",
-        "SAP"
-      ]
-    },
-    "seo": {
-      "title": "SEO",
-      "skills": [
-        "Google Webmaster Tools",
-        "Google Analytics",
-        "Google Search Console",
-        "Google Optimize (A/B Testing)",
-        "Google Tag Manager",
-        "Google Trends",
-        "Google AdWords",
-        "Yandex Webmeister Tools",
-        "Yandex Analytic Tools (Metrika, Webvisor)",
-        "MOZ, SEOPtimer, SEOquake"
-      ]
-    },
-    "cms": {
-      "title": "CMS",
-      "skills": [
-        "OpenCart",
-        "Magento",
-        "Wordpress",
-        "Contao"
-      ]
-    },
-    "smm": {
-      "title": "SMM",
-      "skills": [
-        "Managing Tools",
-        "Analytic Tools",
-        "Automation Tools"
-      ]
-    },
-    "additional": {
-      "title": "Additionally",
-      "skills": [
-        "Photoshop",
-        "Design: UX/UI Design",
-        "Marketing Strategy Planning",
-        "Email Marketing + Mailchimp"
-      ]
-    },
+    "skills": [
+      {
+        "title": "Project Management & Web Developement",
+        "open": true,
+        "skills": [
+          "PM Methodology: Agile/KANBAN",
+          "PM Software: Trello, Monday.com, Jira, Google Sheets",
+          "HTML 5, CSS 3, Bootstrap(3,4)",
+          "JavaScript - Advanced",
+          "VueJS-2 & VueJS-3 - intermediate",
+          "PHP - fundamentals",
+          "Mobile Web Design Optimization",
+          "PIM - Content Management Automation (180.000 Products)",
+          "Google: Sheets, Docs, Slides, Drive",
+          "Microsoft: Excel, Word, SharePoint",
+          "SAP - development"
+        ]
+      },
+      {
+        "title": "SEO",
+        "open": false,
+        "skills": [
+          "Google Tag Manager",
+          "Google Webmaster Tools/Analytics/Search Console/Trends/AdWords",
+          "Google Optimize (A/B Testing)",
+          "Yandex Webmeister Tools/Analytic Tools (Metrika, Webvisor)",
+          "MOZ, SEOPtimer, SEOquake"
+        ]
+      },
+      {
+        "title": "CMS",
+        "open": false,
+        "skills": [
+          "OpenCart",
+          "Magento",
+          "Wordpress",
+          "Contao"
+        ]
+      },
+      {
+        "title": "SMM",
+        "open": false,
+        "skills": [
+          "Managing Tools",
+          "Analytic Tools",
+          "Automation Tools"
+        ]
+      },
+      {
+        "title": "Additionally",
+        "open": true,
+        "skills": [
+          "Photoshop",
+          "Design: UX/UI Design",
+          "Marketing Strategy Planning",
+          "Email Marketing + Mailchimp"
+        ]
+      }
+    ],
     "lang": {
       "title": "Languages",
       "skills": {
@@ -429,10 +431,10 @@
         "id": 4,
         "title": "JavaScript",
         "list": [
-          { "description": "Snake (browser game)", "link": "http://cv.lux-exchange.com/portfolio/waxom_landingpage/" },
-          { "description": "Battleship (browser game)", "link": "http://cv.lux-exchange.com/portfolio/waxom_landingpage/" },
-          { "description": "TicTacToe (browser game)", "link": "http://cv.lux-exchange.com/portfolio/waxom_landingpage/" },
-          { "description": "Chess Table", "link": "http://cv.lux-exchange.com/portfolio/waxom_landingpage/" }
+          { "description": "Snake (browser game)", "link": "https://i2tpm.csb.app/" },
+          { "description": "Battleship (browser game)", "link": "https://mh1rb.csb.app/" },
+          { "description": "TicTacToe (browser game)", "link": "https://rugre.csb.app/" },
+          { "description": "Chess Table", "link": "https://r67gg.csb.app/" }
         ]
       },
       {
@@ -440,7 +442,7 @@
         "title": "VueJS2/3",
         "list": [
           { "description": "VueJS-2: Simple Table Overview", "link": "https://kv9hg.csb.app/" },
-          { "description": "VueJS-3: ReactionTimer - webNinja", "link": "https://hy6yqr.csb.app/" },
+          { "description": "VueJS-3: ReactionTimer - webNinja", "link": "https://osmnmz.csb.app/" },
           { "description": "VueJS-3: Online CV", "link": "/#" }
         ]
       },

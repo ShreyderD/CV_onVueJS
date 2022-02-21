@@ -5,10 +5,8 @@
           <div class="personal_data">
             <p class="section-title_1">{{ personal_info }}</p>
             <ul class="pdatalist">
-              <li><b>{{ data.visa }}</b> {{ data.visatype }}</li>
-              <li><b>{{ data.address }}:</b> {{ data.location }}</li>
+              <li v-for="i in data.personaldata" :key="i.title"><b>{{ i.title }}:</b> {{ i.text }}</li>
               <li><b>{{ data.birthday }}:</b> {{ data.birthday_date }} (<span id="full-year">{{ fullYear }}</span> years old)</li>
-              <li><b>{{ data.insurance }}:</b> {{ data.insuranceID }}</li>
             </ul>
           </div>
           <div class="contacts">
