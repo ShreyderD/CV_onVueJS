@@ -7,27 +7,35 @@
         <div class="ancors-block">
             <div class="ancors-container">
               <div class="ancor-item">
-                  <div class="item-box">
-                      <i class="icon-ios-list-outline"></i>
-                      <p class="ancor-text"><router-link :to="{ name: 'KeySkills', params: {} }">#Key Skills</router-link></p>
-                  </div>
+                <div class="item-box">
+                  <router-link :to="{ name: 'KeySkills', params: {} }">
+                    <i class="icon-ios-list-outline"></i>
+                    <p class="ancor-text">#Key Skills</p>
+                  </router-link>
+                </div>
               </div>
                 <div class="ancor-item">
-                    <div class="item-box">
-                        <i class="icon-settings-streamline-2"></i>
-                        <p class="ancor-text"><router-link :to="{ name: 'Experience', params: {} }">#Experience</router-link></p>
-                    </div>
+                  <div class="item-box">
+                    <router-link :to="{ name: 'Experience', params: {} }">
+                      <i class="icon-settings-streamline-2"></i>
+                      <p class="ancor-text">#Experience</p>
+                    </router-link>
+                  </div>
                 </div>
                 <div class="ancor-item">
                     <div class="item-box">
+                      <router-link :to="{ name: 'Education', params: {} }">
                         <i class="icon-earth-globe-streamline"></i>
-                        <p class="ancor-text"><router-link :to="{ name: 'Education', params: {} }">#Education</router-link></p>
+                        <p class="ancor-text">#Education</p>
+                      </router-link>
                     </div>
                 </div>
                 <div class="ancor-item">
                     <div class="item-box">
+                      <router-link :to="{ name: 'Portfolio', params: {} }">
                         <i class="icon-picture-streamline-1"></i>
-                        <p class="ancor-text"><router-link :to="{ name: 'Portfolio', params: {} }">#Portfolio</router-link></p>
+                        <p class="ancor-text">#Portfolio</p>
+                      </router-link>
                     </div>
                 </div>
             </div>

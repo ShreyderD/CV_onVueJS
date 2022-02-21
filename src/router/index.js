@@ -3,6 +3,8 @@ import KeySkills from '../views/KeySkills.vue'
 import Experience from '../views/Experience.vue'
 import Education from '../views/Education.vue'
 import Portfolio from '../views/Portfolio.vue'
+import Page404 from '../views/Page404.vue'
+
 
 const routes = [
   {
@@ -24,7 +26,13 @@ const routes = [
     path: '/portfolio',
     name: 'Portfolio',
     component: Portfolio
-  }
+  },
+  //Catch all 404
+{
+  path: '/:catchAll(.*)',
+  name: 'Page404',
+  component: Page404
+}
   // {
     // path: '/about',
     // name: 'About',
