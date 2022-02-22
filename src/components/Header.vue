@@ -1,11 +1,11 @@
 <template lang="html">
   <div class="header">
-      <div class="settings_langs" @click="$store.commit('chooseLanguage', $event)">
-        <span :class="{ activelang: $store.state.activeLang === 'en' }">EN</span>/<span :class="{ activelang: $store.state.activeLang === 'de' }">DE</span>
+      <div class="settings_langs" @click="$store.commit('chooseLanguage', $event), switchLanguage()">
+        <span :class="{ activelang: $store.state.activeLang === 'EN' }">EN</span>/<span :class="{ activelang: $store.state.activeLang === 'DE' }">DE</span>
       </div>
       <div v-if="data" class="header-text">
-          <p>{{ data.name }} {{ data.surname }}</p>
-          <p style="font-size: 18px;">{{ data.profession }}</p>
+          <p>{{ data.personal.name }} {{ data.personal.surname }}</p>
+          <p style="font-size: 18px;">{{ data.personal.profession }}</p>
       </div>
       <div v-else class="my-notify-error">
         <p class="warning">{{ error }}</p>
@@ -18,13 +18,10 @@
 export default {
   name: 'Header',
   props: [ 'data', 'error' ],
-  data() {
-    return {
-      activeLang: "EN"
-    }
-  },
   methods: {
-
+    switchLanguage() {
+      console.log('switch language!')
+    }
   }
 }
 </script>

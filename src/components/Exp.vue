@@ -1,7 +1,7 @@
 <template lang="html">
   <div v-if="data">
-    <p class="section-title_2" id="experience">{{ data.title }}</p>
-    <div v-for="job in data.jobs" :key="job.id" class="position">
+    <p class="section-title_2" id="experience">{{ data.experience.title }}:</p>
+    <div v-for="job in data.experience.jobs" :key="job.id" class="position">
       <div class="period">
           <div class="center">{{ job.from }} <br />{{ job.to }}</div>
       </div>
@@ -10,7 +10,7 @@
         <div v-if="job.id === activeID" class="position__description">
           <p>{{ job.description }}</p>
           <div v-if="job.aor[0].title" class="responsabilities">
-              <p class="position_sub_titles">{{ data.txt1 }}</p>
+              <p class="position_sub_titles">{{ data.experience.txt1 }}</p>
               <ul v-for="item in job.aor" :key="item.title">
                   <li>{{ item.title }}
                       <ul>
@@ -29,14 +29,18 @@
 <script>
 import getDB from '@/composables/getDB'
 import Error from '@/components/Error'
+import { useStore } from 'vuex'
+
 
 export default {
   name: "Exp",
   components: { Error },
-  setup() {
+  setup($store) {
+    const store = useStore()
     const { loadData, data, error } = getDB()
 
-    loadData('http://localhost:3000/experience')
+    let url = `http://localhost:3000/${store.state.activeLang}`
+    loadData(url)
 
     return { data, error }
   },

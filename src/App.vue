@@ -66,17 +66,14 @@ export default {
     const store = useStore()
     const { loadData, data, error } = getDB()
 
-    // let url = `http://localhost:3000/${store.state.activeLang}`
-    let url = `http://localhost:3000/homepage`
-    // console.log('url:', url);
+    let url = `http://localhost:3000/${store.state.activeLang}`
     loadData(url)
 
-    console.log('DATA:')
-    console.log(data)
-    console.log(data)
-    console.log(data.name)
+    // console.log('DATA:')
+      // console.log(data)
+      // console.log(data.value) //this object doesn't exist yet!!! Because it gets filled only after we return the Data via "return {}"
+      //more on this issue here: https://www.youtube.com/watch?v=V-kxBWcPJfo&list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1&index=10 at 16:20
 
-    // data = data.homepage
     return { data, error }
   }
 }

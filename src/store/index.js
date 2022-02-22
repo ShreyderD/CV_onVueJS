@@ -2,7 +2,7 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    activeLang: 'en'
+    activeLang: 'EN'
   },
   mutations: {
     chooseLanguage(state, e) {
