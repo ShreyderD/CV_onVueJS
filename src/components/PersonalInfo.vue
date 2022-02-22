@@ -21,8 +21,8 @@
           </div>
       </div>
         <div class="cover_letter">
-          <p class="section-title_1">{{ data.pitch_title }}:</p>
-          <p>{{ data.pitch_text }}</p>
+          <p class="section-title_1">{{ data.personal.pitch_title }}:</p>
+          <p>{{ data.personal.pitch_text }}</p>
         </div>
 
         <div class="icons">
