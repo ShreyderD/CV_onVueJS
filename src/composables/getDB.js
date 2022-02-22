@@ -9,7 +9,10 @@ const getDB = () => {
       let request = await fetch(key)
       if(request.status !== 200 ) { throw new Error(`Couldn't fetch data from source: ${key}`)}
       data.value = await request.json()
-      // console.log(data.value)
+      console.log("getDB()")
+      console.log(data)
+      console.log(data.value)
+      console.log(data.value.name)
 
     } catch(err) {
       error.value = err.message

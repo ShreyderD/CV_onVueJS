@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="header">
-      <div class="settings_langs" @click="chooseLanguage($event)">
-        <span :class="{ activelang: activeLang === 'EN' }">EN</span>/<span :class="{ activelang: activeLang === 'DE' }">DE</span>
+      <div class="settings_langs" @click="$store.commit('chooseLanguage', $event)">
+        <span :class="{ activelang: $store.state.activeLang === 'en' }">EN</span>/<span :class="{ activelang: $store.state.activeLang === 'de' }">DE</span>
       </div>
       <div v-if="data" class="header-text">
           <p>{{ data.name }} {{ data.surname }}</p>
@@ -24,11 +24,7 @@ export default {
     }
   },
   methods: {
-    chooseLanguage(e) {
-      // this.activeLang = langID
-      this.activeLang = e.target.innerText
-      console.log(e.target.innerText)
-    }
+
   }
 }
 </script>

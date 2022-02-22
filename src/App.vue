@@ -54,6 +54,7 @@
 import getDB from '@/composables/getDB'
 import Header from '@/components/Header.vue'
 import PersonalInfo from '@/components/PersonalInfo'
+import { useStore } from 'vuex'
 
 export default {
   name: 'App',
@@ -61,11 +62,21 @@ export default {
     Header,
     PersonalInfo
   },
-  setup() {
+  setup($store) {
+    const store = useStore()
     const { loadData, data, error } = getDB()
 
-    loadData('http://localhost:3000/homepage')
+    // let url = `http://localhost:3000/${store.state.activeLang}`
+    let url = `http://localhost:3000/homepage`
+    // console.log('url:', url);
+    loadData(url)
 
+    console.log('DATA:')
+    console.log(data)
+    console.log(data)
+    console.log(data.name)
+
+    // data = data.homepage
     return { data, error }
   }
 }
