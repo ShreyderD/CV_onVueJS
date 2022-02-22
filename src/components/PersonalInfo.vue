@@ -27,7 +27,7 @@
 
         <div class="icons">
           <div class="icons__social">
-            <p class="section-title_1">{{ data.social }}</p>
+            <p class="section-title_1">{{ data.personal.social }}</p>
             <a class="a0" href="https://www.instagram.com/dmitriyshreyder/" target="_blank">
               <i class="icon-instagram" title="instagram"></i>
             </a>
@@ -36,7 +36,7 @@
             </a>
           </div>
           <div class="icons__hobbies">
-            <p class="section-title_1">{{ data.hobby_title }}</p>
+            <p class="section-title_1">{{ data.personal.hobby_title }}</p>
             <i class="icon-barbell" title="fitness"></i>
             <i class="icon-mountains" title="hiking"></i>
             <i class="icon-language" title="learn languagies"></i>
