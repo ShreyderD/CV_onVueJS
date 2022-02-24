@@ -1,8 +1,17 @@
 <template lang="html">
+<!-- <p>uri:</p>
+<p>{{ $route.params.id }}</p>
+<p>{{ uri }}</p>
+<p>{{ $store.state.activeLang }}</p> -->
   <div class="header">
       <div class="settings_langs" @click="$store.commit('chooseLanguage', $event), switchLanguage()">
-        <span :class="{ activelang: $store.state.activeLang === 'EN' }">EN</span>/<span :class="{ activelang: $store.state.activeLang === 'DE' }">DE</span>
+        <a href="#"><span :class="{ activelang: $store.state.activeLang === 'EN' }">EN</span>
+        </a>
+        / 
+        <a href="#"><span :class="{ activelang: $store.state.activeLang === 'DE' }">DE</span>
+        </a>
       </div>
+      
       <div v-if="data" class="header-text">
           <p>{{ data.personal.name }} {{ data.personal.surname }}</p>
           <p style="font-size: 18px;">{{ data.personal.profession }}</p>
@@ -18,10 +27,25 @@
 export default {
   name: 'Header',
   props: [ 'data', 'error' ],
+  data() {
+    return {
+      uri: null
+    }
+  },
   methods: {
     switchLanguage() {
       console.log('switch language!')
+      this.$router.push( { name: 'KeySkills' } )
     }
+  },
+  beforeCreate() {
+    // this.$store.state.activeLang = this.$route.params.id
+  },
+  created(){
+        this.uri = this.$route.params.id; //this.$route.query.page; //this.$router.history.current.path //window.location.pathname;
+        console.log(this.uri);
+      // this.uri = this.$route.query.page
+      // console.log(this.$route.query.page)
   }
 }
 </script>

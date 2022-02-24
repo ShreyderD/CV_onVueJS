@@ -8,7 +8,7 @@
             <div class="ancors-container">
               <div class="ancor-item">
                 <div class="item-box">
-                  <router-link :to="{ name: 'KeySkills', params: {} }">
+                  <router-link :to="{ name: 'KeySkills', params: { id: $store.state.activeLang } }">
                     <i class="icon-ios-list-outline"></i>
                     <p class="ancor-text">#Key Skills</p>
                   </router-link>
@@ -16,7 +16,7 @@
               </div>
                 <div class="ancor-item">
                   <div class="item-box">
-                    <router-link :to="{ name: 'Experience', params: {} }">
+                    <router-link :to="{ name: 'Experience', params: { id: $store.state.activeLang } }">
                       <i class="icon-settings-streamline-2"></i>
                       <p class="ancor-text">#Experience</p>
                     </router-link>
@@ -24,7 +24,7 @@
                 </div>
                 <div class="ancor-item">
                     <div class="item-box">
-                      <router-link :to="{ name: 'Education', params: {} }">
+                      <router-link :to="{ name: 'Education', params: { id: $store.state.activeLang } }">
                         <i class="icon-earth-globe-streamline"></i>
                         <p class="ancor-text">#Education</p>
                       </router-link>
@@ -32,7 +32,7 @@
                 </div>
                 <div class="ancor-item">
                     <div class="item-box">
-                      <router-link :to="{ name: 'Portfolio', params: {} }">
+                      <router-link :to="{ name: 'Portfolio', params: { id: $store.state.activeLang } }">
                         <i class="icon-picture-streamline-1"></i>
                         <p class="ancor-text">#Portfolio</p>
                       </router-link>
@@ -56,6 +56,7 @@ import Header from '@/components/Header.vue'
 import PersonalInfo from '@/components/PersonalInfo'
 import { useStore } from 'vuex'
 
+
 export default {
   name: 'App',
   components: {
@@ -70,8 +71,10 @@ export default {
     loadData(url)
 
     // console.log('DATA:')
-      // console.log(data)
-      // console.log(data.value) //this object doesn't exist yet!!! Because it gets filled only after we return the Data via "return {}"
+    // console.log(data)
+    // console.log(data.value) 
+    // console.log(data.personal.name)
+      //this object doesn't exist yet!!! Because it gets filled only after we return the Data via "return {}"
       //more on this issue here: https://www.youtube.com/watch?v=V-kxBWcPJfo&list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1&index=10 at 16:20
 
     return { data, error }

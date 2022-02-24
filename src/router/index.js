@@ -8,31 +8,31 @@ import Page404 from '../views/Page404.vue'
 
 const routes = [
   {
-    path: '/',
+    path: '/keyskills/:id',
     name: 'KeySkills',
     component: KeySkills
   },
   {
-    path: '/experience',
+    path: '/experience/:id',
     name: 'Experience',
     component: Experience
   },
   {
-    path: '/education',
+    path: '/education/:id',
     name: 'Education',
     component: Education
   },
   {
-    path: '/portfolio',
+    path: '/portfolio/:id',
     name: 'Portfolio',
     component: Portfolio
   },
   //Catch all 404
-{
-  path: '/:catchAll(.*)',
-  name: 'Page404',
-  component: Page404
-}
+  {
+    path: '/:catchAll(.*)',
+    name: 'Page404',
+    component: Page404
+  }
   // {
     // path: '/about',
     // name: 'About',
