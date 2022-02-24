@@ -6,7 +6,7 @@
             <p class="section-title_1">{{ $store.state.db.personal.title }}:</p>
             <ul class="pdatalist">
               <li v-for="i in $store.state.db.personal.personaldata" :key="i.title"><b>{{ i.title }}:</b> {{ i.text }}</li>
-              <li><b>{{ $store.state.db.personal.birthday }}:</b> {{ $store.state.db.personal.birthday_date }} (<span id="full-year">{{ fullYear }}</span> years old)</li>
+              <li><b>{{ $store.state.db.personal.birthday }}:</b> {{ $store.state.db.personal.birthday_date }} (<span id="full-year">{{ fullYear }}</span> {{ $store.state.db.personal.full_year_text }})</li>
             </ul>
           </div>
           <div class="contacts">
