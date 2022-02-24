@@ -125,7 +125,6 @@ export default {
     font-family:FontAwesome;
     font-style:normal;
     font-weight:400;
-    speak:none;
     display:inline-block;
     text-decoration:inherit;
     width:1em;
