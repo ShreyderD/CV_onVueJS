@@ -16,14 +16,14 @@
           <p>{{ data.personal.name }} {{ data.personal.surname }}</p>
           <p style="font-size: 18px;">{{ data.personal.profession }}</p>
       </div>
-      <div v-else class="my-notify-error">
-        <p class="warning">{{ error }}</p>
-      </div>
+      <Error :error="error" />
       <img alt="Dmitriy Shreyder Foto 2019" class="introduction__photo" src="@/../img/CV_Photo_2018_10.jpg" />
   </div>
 </template>
 
 <script>
+import Error from '@/components/Error'
+
 export default {
   name: 'Header',
   props: [ 'data', 'error' ],
@@ -46,7 +46,8 @@ export default {
         console.log(this.uri);
       // this.uri = this.$route.query.page
       // console.log(this.$route.query.page)
-  }
+  },
+  components: { Error }
 }
 </script>
 
