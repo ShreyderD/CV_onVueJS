@@ -1,6 +1,6 @@
 <template lang="html">
   <div v-if="$store.state.db">
-    <p class="section-title_2" id="portfolio">{{ $store.state.db.portfolio.title }}</p>
+    <p class="section-title_2" id="portfolio">{{ $store.state.db.portfolio.title }}:</p>
     <ul>
         <li v-for="project in $store.state.db.portfolio.projects" :key="project.id">
           <b>{{ project.title }}</b>

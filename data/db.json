@@ -427,7 +427,7 @@
         ]
       },
       "portfolio": {
-        "title": "Portfolio:",
+        "title": "Portfolio",
         "projects": [
           {
             "id": 4,
@@ -899,7 +899,7 @@
       ]
     },
     "portfolio": {
-      "title": "PortfolioDE:",
+      "title": "Portfolio",
       "projects": [
         {
           "id": 4,
