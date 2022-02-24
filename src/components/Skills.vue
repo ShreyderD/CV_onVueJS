@@ -1,17 +1,17 @@
 <template lang="html">
-  <div v-if="data">
+  <div v-if="$store.state.db">
     <div>
-      <p class="section-title_2">{{ data.skilllist.title }}:</p>
-      <details v-for="skill in data.skilllist.skills" :open="skill.open" :key="skill.title">
+      <p class="section-title_2">{{ $store.state.db.skilllist.title }}:</p>
+      <details v-for="skill in $store.state.db.skilllist.skills" :open="skill.open" :key="skill.title">
           <summary class="summary">{{ skill.title }}</summary>
           <ul>
             <li v-for="item in skill.skills" :key="skill">{{ item }}</li>
           </ul>
       </details>
       <section class="lang">
-        <p class="position_sub_titles">{{ data.skilllist.lang.title }}</p>
+        <p class="position_sub_titles">{{ $store.state.db.skilllist.lang.title }}</p>
         <div class="lang_wrap">
-          <div class="graph-container" v-for="skill in data.skilllist.lang.skills" :key="skill.title">
+          <div class="graph-container" v-for="skill in $store.state.db.skilllist.lang.skills" :key="skill.title">
             <div class="graph-item-container">
                 <div class="graph-item" :title="skill.level">
                     <div class="circle-bg">
@@ -30,22 +30,11 @@
 </template>
 
 <script>
-import getDB from '@/composables/getDB'
 import Error from '@/components/Error'
-import { useStore } from 'vuex'
 
 export default {
   name: 'Skills',
-  components: { Error },
-  setup($store) {
-    const store = useStore()
-    const { loadData, data, error } = getDB()
-
-    let url = `http://localhost:3000/${store.state.activeLang}`
-    loadData(url)
-
-    return { data, error }
-  }
+  components: { Error }
 }
 </script>
 

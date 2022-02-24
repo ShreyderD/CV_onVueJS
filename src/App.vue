@@ -1,7 +1,8 @@
 <template>
-  <Header :data="data" :error="error" />
+ <div v-if="$store.state.db">
+  <Header :data="$store.state.db.personal" :error="$store.state.error"/>
   <div class="container">
-    <PersonalInfo :data="data" :error="error" />
+    <PersonalInfo />
     <div class="wrap">
       <div id="nav">
         <div class="ancors-block">
@@ -48,14 +49,12 @@
       </div>
     </div>
   </div>
+  </div>
 </template>
 
 <script type="text/javascript">
-import getDB from '@/composables/getDB'
 import Header from '@/components/Header.vue'
 import PersonalInfo from '@/components/PersonalInfo'
-import { useStore } from 'vuex'
-
 
 export default {
   name: 'App',
@@ -63,22 +62,10 @@ export default {
     Header,
     PersonalInfo
   },
-  setup($store) {
-    const store = useStore()
-    const { loadData, data, error } = getDB()
-
-    let url = `http://localhost:3000/${store.state.activeLang}`
-    loadData(url)
-
-    // console.log('DATA:')
-    // console.log(data)
-    // console.log(data.value) 
-    // console.log(data.personal.name)
-      //this object doesn't exist yet!!! Because it gets filled only after we return the Data via "return {}"
-      //more on this issue here: https://www.youtube.com/watch?v=V-kxBWcPJfo&list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1&index=10 at 16:20
-
-    return { data, error }
-  }
+  beforeCreate() {
+    console.log('beforeCreate()')
+    this.$store.commit('getDB')
+  },
 }
 </script>
 <style>
@@ -93,7 +80,7 @@ export default {
 } */
 
 #nav {
-  padding: 30px;
+  padding: 20px 0 10px;
 }
 
 #nav a {

@@ -468,7 +468,7 @@
       }
   },
   "de": {
-    "homepage": {
+    "personal": {
       "title": "Personaldaten",
       "name": "Dmitriy",
       "surname": "Shreyder",
@@ -810,7 +810,7 @@
       ]
     },
     "education": {
-      "title": "Education:",
+      "title": "Ausbildung:",
       "txt1": "Kursübersicht",
       "courses": [
         { "id": 5,
@@ -899,7 +899,7 @@
       ]
     },
     "portfolio": {
-      "title": "Portfolio:",
+      "title": "PortfolioDE:",
       "projects": [
         {
           "id": 4,

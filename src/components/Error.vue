@@ -1,13 +1,12 @@
 <template lang="html">
-  <div v-if="error" class="my-notify-error">
-    <p class="warning">{{ error }}!</p>
+  <div v-if="$store.state.error" class="my-notify-error">
+    <p class="warning">{{ $store.state.error }}!</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Error",
-  props: [ 'error' ]
+  name: "Error"
 }
 </script>
 

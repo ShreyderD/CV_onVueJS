@@ -2,6 +2,8 @@
 
 :root{
   --white: #fff;
+  --c-brand: #3eaf7c;
+  --c-brand-light: #4abf8a;
 }
 * {
     /* transition: all 0.1s; */
@@ -82,19 +84,23 @@ body {
 }
 .header-text {
     margin: auto 20px;
-    font-size: 40px;
     color: var(--white);
     font-variant: all-small-caps;
     text-align: end;
     text-align: right;
+}
+.header-text--title {
+    font-size: 24px;
+}
+.header-text--subtitle {
+    font-size: 18px;
 }
 
 
 .introduction__photo {
     margin: auto 0;
     border-radius: 20px;
-    max-width: 150px;
-    height: 150px;
+    width: 120px;
 }
 
 .container {
@@ -387,8 +393,8 @@ ul {
 }
 
 .ancor-text:hover {
-    color: var(--white);
     text-decoration: none;
+    color: var(--c-brand);
     cursor: pointer;
     -webkit-transition: color 0.1s;
     -o-transition: color 0.1s;
@@ -468,7 +474,6 @@ ul {
     font-family: sans-serif;
     letter-spacing: 1px;
     border-bottom: 1px solid #333;
-    margin: 1.4rem 0 0 0;
     width: 100%;
 }
 
