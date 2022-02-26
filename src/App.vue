@@ -11,7 +11,7 @@
                 <div class="item-box">
                   <router-link :to="{ name: 'KeySkills', params: { id: $store.state.activeLang } }">
                     <i class="icon-ios-list-outline"></i>
-                    <p class="ancor-text">#Key Skills</p>
+                    <p class="ancor-text">{{ $store.state.db.routelinks.keyskills }}</p>
                   </router-link>
                 </div>
               </div>
@@ -19,7 +19,7 @@
                   <div class="item-box">
                     <router-link :to="{ name: 'Experience', params: { id: $store.state.activeLang } }">
                       <i class="icon-settings-streamline-2"></i>
-                      <p class="ancor-text">#Experience</p>
+                      <p class="ancor-text">{{ $store.state.db.routelinks.experience }}</p>
                     </router-link>
                   </div>
                 </div>
@@ -27,7 +27,7 @@
                     <div class="item-box">
                       <router-link :to="{ name: 'Education', params: { id: $store.state.activeLang } }">
                         <i class="icon-earth-globe-streamline"></i>
-                        <p class="ancor-text">#Education</p>
+                        <p class="ancor-text">{{ $store.state.db.routelinks.education }}</p>
                       </router-link>
                     </div>
                 </div>
@@ -35,7 +35,7 @@
                     <div class="item-box">
                       <router-link :to="{ name: 'Portfolio', params: { id: $store.state.activeLang } }">
                         <i class="icon-picture-streamline-1"></i>
-                        <p class="ancor-text">#Portfolio</p>
+                        <p class="ancor-text">{{ $store.state.db.routelinks.portfolio }}</p>
                       </router-link>
                     </div>
                 </div>
@@ -65,47 +65,24 @@ export default {
   beforeCreate() {
     console.log('beforeCreate()')
     this.$store.commit('getDB')
-  },
+  }
 }
 </script>
+
+
 <style>
-/* @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'); */
-
-/* #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-} */
-
 #nav {
-  padding: 20px 0 10px;
-}
-
-#nav a {
-
-  font-weight: bold;
-  color: #2c3e50;
+  padding: 2rem 0 1rem;
 }
 
 #nav a.router-link-exact-active {
   color: #42b983;
 }
 
-/*
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
-
-* {
-    transition: all 0.3s;
-    clear: both;
-}
-
-
 /* Errors/Wanings Style: Start */
 .my-notify-info, .my-notify-success, .my-notify-warning, .my-notify-error {
-    padding:10px;
-    margin:10px 0;
+    padding: 1rem;
+    margin: 1rem 0;
 
 }
 .my-notify-info:before, .my-notify-success:before, .my-notify-warning:before, .my-notify-error:before {
@@ -115,7 +92,7 @@ export default {
     display:inline-block;
     text-decoration:inherit;
     width:1em;
-    margin-right:.2em;
+    margin-right: 0.2rem;
     text-align:center;
     font-variant:normal;
     text-transform:none;

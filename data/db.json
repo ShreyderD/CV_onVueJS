@@ -1,5 +1,11 @@
 {
   "en": {
+    "routelinks": {
+      "keyskills": "#Key Skills",
+      "experience": "#Experience",
+      "education": "#Education",
+      "portfolio": "#Portfolio"
+    },
       "personal": {
         "title": "Personal Info",
         "name": "Dmitriy",
@@ -469,6 +475,12 @@
       }
   },
   "de": {
+    "routelinks": {
+      "keyskills": "#Skills",
+      "experience": "#Erfahrung",
+      "education": "#Ausbildung",
+      "portfolio": "#Portfolio"
+    },
     "personal": {
       "title": "Personaldaten",
       "name": "Dmitriy",

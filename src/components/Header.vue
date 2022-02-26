@@ -11,7 +11,7 @@
           <p class="header-text--title">{{ data.name }} {{ data.surname }}</p>
           <p class="header-text--subtitle">{{ data.profession }}</p>
       </div>
-      <img alt="Dmitriy Shreyder Foto 2019" class="introduction__photo" src="@/../img/CV_Photo_2018_10.jpg" />
+      <img class="profile_pic" alt="Dmitriy Shreyder Foto 2019" src="@/../img/CV_Photo_2018_10.jpg" />
   </div>
   <Error />
 </template>

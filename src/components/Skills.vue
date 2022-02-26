@@ -97,7 +97,7 @@ export default {
   position: absolute;
   width: 50px;
   height: 100px;
-  background: #777;
+  background: var(--bright-color);
   z-index: 1;
   border-radius: 50px 0 0 50px;
   transform: rotate(0deg);
@@ -111,7 +111,7 @@ export default {
   z-index: 1;
   width: 50px;
   height: 100px;
-  background: #777;
+  background: var(--bright-color);
   border-radius: 0 50px 50px 0;
   transform: rotate(0deg) translate(0%, 0%);
 }

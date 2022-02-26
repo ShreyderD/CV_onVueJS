@@ -8,22 +8,22 @@ import Page404 from '../views/Page404.vue'
 
 const routes = [
   {
-    path: '/keyskills/:id',
+    path: '/',
     name: 'KeySkills',
     component: KeySkills
   },
   {
-    path: '/experience/:id',
+    path: '/experience',
     name: 'Experience',
     component: Experience
   },
   {
-    path: '/education/:id',
+    path: '/education',
     name: 'Education',
     component: Education
   },
   {
-    path: '/portfolio/:id',
+    path: '/portfolio',
     name: 'Portfolio',
     component: Portfolio
   },
