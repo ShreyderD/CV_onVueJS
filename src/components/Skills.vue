@@ -3,34 +3,34 @@
     <div>
       <p class="section-title_2">{{ $store.state.db.skilllist.title }}:</p>
       <details v-for="skill in $store.state.db.skilllist.skills" :open="skill.open" :key="skill.title">
-          <summary class="summary">{{ skill.title }}</summary>
-          <ul>
-            <li v-for="item in skill.skills" :key="skill">{{ item }}</li>
-          </ul>
+        <summary class="summary">{{ skill.title }}</summary>
+        <ul>
+          <li v-for="item in skill.skills" :key="skill">{{ item }}</li>
+        </ul>
       </details>
       <section class="lang">
         <p class="position_sub_titles">{{ $store.state.db.skilllist.lang.title }}</p>
         <div class="lang_wrap">
           <div class="graph-container" v-for="skill in $store.state.db.skilllist.lang.skills" :key="skill.title">
             <div class="graph-item-container">
-                <div class="graph-item" :title="skill.level">
-                    <div class="circle-bg">
-                        <div class="text-container">
-                            <p class="text">{{ skill.code }}</p>
-                        </div>
-                    </div>
+              <div class="graph-item" :title="skill.level">
+                <div class="circle-bg">
+                  <div class="text-container">
+                    <p class="text">{{ skill.code }}</p>
+                  </div>
                 </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </div>
   </div>
-  <Error :error="error" />
+  <Error />
 </template>
 
 <script>
-import Error from '@/components/Error'
+import Error from '@/components/Error.vue'
 
 export default {
   name: 'Skills',

@@ -1,11 +1,11 @@
 <template>
  <div v-if="$store.state.db">
-  <Header :data="$store.state.db.personal" :error="$store.state.error"/>
-  <div class="container">
-    <PersonalInfo />
-    <div class="wrap">
-      <div id="nav">
-        <div class="ancors-block">
+  <Header />
+    <div class="container">
+      <PersonalInfo />
+      <div class="wrap">
+        <div id="nav">
+          <div class="ancors-block">
             <div class="ancors-container">
               <div class="ancor-item">
                 <div class="item-box">
@@ -24,31 +24,31 @@
                   </div>
                 </div>
                 <div class="ancor-item">
-                    <div class="item-box">
-                      <router-link :to="{ name: 'Education', params: { id: $store.state.activeLang } }">
-                        <i class="icon-earth-globe-streamline"></i>
-                        <p class="ancor-text">{{ $store.state.db.routelinks.education }}</p>
-                      </router-link>
-                    </div>
+                  <div class="item-box">
+                    <router-link :to="{ name: 'Education', params: { id: $store.state.activeLang } }">
+                      <i class="icon-earth-globe-streamline"></i>
+                      <p class="ancor-text">{{ $store.state.db.routelinks.education }}</p>
+                    </router-link>
+                  </div>
                 </div>
                 <div class="ancor-item">
-                    <div class="item-box">
-                      <router-link :to="{ name: 'Portfolio', params: { id: $store.state.activeLang } }">
-                        <i class="icon-picture-streamline-1"></i>
-                        <p class="ancor-text">{{ $store.state.db.routelinks.portfolio }}</p>
-                      </router-link>
-                    </div>
+                  <div class="item-box">
+                    <router-link :to="{ name: 'Portfolio', params: { id: $store.state.activeLang } }">
+                      <i class="icon-picture-streamline-1"></i>
+                      <p class="ancor-text">{{ $store.state.db.routelinks.portfolio }}</p>
+                    </router-link>
+                  </div>
                 </div>
             </div>
+          </div>
+        </div>
+        <div class="blockright">
+          <!-- <transition name="fade" mode="out-in"> -->
+            <router-view />
+          <!-- </transition> -->
         </div>
       </div>
-      <div class="blockright">
-        <transition name="fade" mode="out-in">
-          <router-view />
-        </transition>
-      </div>
     </div>
-  </div>
   </div>
 </template>
 
@@ -63,7 +63,6 @@ export default {
     PersonalInfo
   },
   beforeCreate() {
-    console.log('beforeCreate()')
     this.$store.commit('getDB')
   }
 }

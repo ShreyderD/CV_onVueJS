@@ -1,7 +1,5 @@
 <template>
-  <div class="home">
-      <Skills :data="data" :error="error" />
-  </div>
+  <Skills />
 </template>
 
 <script>
@@ -10,7 +8,6 @@ import Skills from '@/components/Skills'
 
 export default {
   name: 'KeySkills',
-  props: [ 'data', 'error' ],
   components: {
     Skills
   }

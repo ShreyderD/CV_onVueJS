@@ -3,7 +3,7 @@
     <p class="section-title_2" id="study">{{ $store.state.db.education.title }}</p>
     <div v-for="course in $store.state.db.education.courses" :key="course.id" class="position">
       <div class="period">
-          <div class="center">{{ course.from }} - {{ course.to }}</div>
+        <div class="center">{{ course.from }} - {{ course.to }}</div>
       </div>
       <div class="position_title" @click="showList(course.id)"><strong>{{ course.title }}</strong> ({{ course.desctiption }})</div>
       <transition name="slide-fade" mode="out-in">
@@ -14,7 +14,7 @@
             <ul>
               <li v-for="topic in course.topics" :key="topic.title"><b>{{ topic.title }}</b>
                 <ul>
-                    <li v-for="item in topic.list" :key="item">{{ item }}</li>
+                  <li v-for="item in topic.list" :key="item">{{ item }}</li>
                 </ul>
               </li>
             </ul>
