@@ -17,7 +17,7 @@ export default createStore({
       } else if(state.activeLang === 'DE') {
         state.dburl = `/data/db_de.json`
       }
-      console.log('STORE URL:', state.dburl)
+      // console.log('STORE URL:', state.dburl)
 
       const loadData = async (url) => {
         try{
@@ -33,7 +33,8 @@ export default createStore({
           // console.error(err)
         }
       }
-      loadData(state.dburl).then(() => console.log(state.db.personal.title))
+      loadData(state.dburl)
+      // .then(() => console.log(state.db.personal.title))
     },
     chooseLanguage(state, e) {
       state.activeLang = e.target.innerText
