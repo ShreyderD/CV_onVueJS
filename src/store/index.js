@@ -8,7 +8,7 @@ export default createStore({
   },
   mutations: {
     getDB(state) {
-      const url = `http://localhost:3000/${state.activeLang}`
+      const url = `../../data/${state.activeLang}`
       // console.log('STORE URL:', url)
 
       const loadData = async (url) => {

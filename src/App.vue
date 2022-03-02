@@ -1,4 +1,5 @@
 <template>
+<button @click="$store.dispatch('actConsole')"></button>
  <div v-if="$store.state.db">
   <Header />
     <div class="container">
