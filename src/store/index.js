@@ -8,8 +8,9 @@ export default createStore({
   },
   mutations: {
     getDB(state) {
-      const url = `../../data/${state.activeLang}`
-      // console.log('STORE URL:', url)
+      // const url = `../../data/${state.activeLang}`
+      const url = `http://localhost:3000/${state.activeLang}`
+      console.log('STORE URL:', url)
 
       const loadData = async (url) => {
         try{
@@ -31,6 +32,9 @@ export default createStore({
     }
   },
   actions: {
+    actConsole() {
+      console.log('saying GM from store.actions!')
+    }
   },
   getters: {
   },
