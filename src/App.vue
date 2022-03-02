@@ -1,5 +1,5 @@
 <template>
-<button @click="$store.dispatch('actConsole')"></button>
+<!-- <button @click="$store.dispatch('actConsole')"></button> -->
  <div v-if="$store.state.db">
   <Header />
     <div class="container">
@@ -44,9 +44,9 @@
           </div>
         </div>
         <div class="blockright">
-          <!-- <transition name="fade" mode="out-in"> -->
+          <transition name="fade" mode="out-in">
             <router-view />
-          <!-- </transition> -->
+          </transition>
         </div>
       </div>
     </div>
@@ -56,6 +56,7 @@
 <script type="text/javascript">
 import Header from '@/components/Header.vue'
 import PersonalInfo from '@/components/PersonalInfo'
+import axios from 'axios'
 
 export default {
   name: 'App',
@@ -66,6 +67,16 @@ export default {
   beforeCreate() {
     this.$store.commit('getDB')
   }
+  // async created() {
+  //       try {
+
+  //         const res = await axios(`https://www.random.org/integers/?num=1&min=1&max=6&col=1&base=10&format=plain&rnd=new`)
+  //       // .then((response) => { console.log(response) })
+  //       console.log(res.data)
+  //       } catch(err) {
+  //         console.error(err)
+  //       }
+  // }
 }
 </script>
 

@@ -1,0 +1,490 @@
+{
+  "routelinks": {
+    "keyskills": "#Skills",
+    "experience": "#Erfahrung",
+    "education": "#Ausbildung",
+    "portfolio": "#Portfolio"
+  },
+  "personal": {
+    "title": "Personaldaten",
+    "name": "Dmitriy",
+    "surname": "Shreyder",
+    "profession": "IT Projekt Manager/Web Entwickler",
+    "personaldata": [
+      { "title": "Visum", "text": "Daueraufenthalt" },
+      { "title": "Wohnsitz", "text": "Leonding (Linz), Plz: 4060" },
+      { "title": "Versicherung", "text": "5474/020188" }
+    ],
+    "birthday": "Geburtstag",
+    "birthday_date": "01.02.1988",
+    "full_year_text": "Jahre alt",
+    "telegram": "@DShreyder",
+    "whatsApp": "+436504200204",
+    "email": "schreyders@gmail.com",
+    "mobile_phone": "+43 (0) 650-4200-204",
+    "social": "Social:",
+    "social_media": ["instagram", "facebook"],
+    "hobby_title": "Hobby:",
+    "hobby": ["Fitness", "Wandern", "Sprachen"],
+    "pitch_title": "Motivationsschreiben",
+    "pitch_text": "Was bestimmt einen guten Spezialist: Fähigkeiten, Kenntnisse, Erfahrung oder akademischer Grad? In der schnelllebigen Umgebung wie IT würde ich auf jemanden setzen, der liebt, was er tut und ständig lernt. Und ich bin genau so einer. Ich bin ein guter Profi nicht deswegen, dass ich die Prüfungen bestanden habe, aber deswegen, dass ich liebe was ich mache. Es hat als Hobby begonnen und jetzt bin ich ein ausgezeichneter Projektmanager und ein hervorragender SEO-Experte. Daher gelangen meine Websiten auf die erste Seite von Google SERP."
+  },
+  "skilllist": {
+    "title": "Schlüsselfertigkeiten",
+    "skills": [
+      {
+        "title": "Projekt Management & Web Developement",
+        "open": true,
+        "skills": [
+          "PM Methodologie: Agile - Scrum/KANBAN",
+          "PM Software: Trello, Monday.com, Jira, Google Sheets",
+          "HTML 5, CSS 3, Bootstrap - fortgeschritten",
+          "JavaScript - fortgeschritten",
+          "VueJS-2 & VueJS-3 - intermediate",
+          "PHP - leicht fortgeschritten",
+          "Mobile Web Design Optimierung",
+          "PIM - Content Management Automation (180.000 Produkte)",
+          "Google: Sheets, Docs, Slides, Drive",
+          "Microsoft: Excel, Word, SharePoint",
+          "SAP - Entwicklung",
+          "SAP-Excel Integration und Automatisierung der operation Prozessen",
+          "VBA - Excel Macros Entwicklung"
+        ]
+      },
+      {
+        "title": "SEO",
+        "open": false,
+        "skills": [
+          "Google Tag Manager",
+          "Google Webmaster Tools/Analytics/Search Console/Trends/AdWords",
+          "Google Optimize (A/B Testing)",
+          "Yandex Webmeister Tools/Analytic Tools (Metrika, Webvisor)",
+          "MOZ, SEOPtimer, SEOquake"
+        ]
+      },
+      {
+        "title": "CMS",
+        "open": false,
+        "skills": ["OpenCart", "Magento", "Wordpress", "Contao"]
+      },
+      {
+        "title": "SMM",
+        "open": false,
+        "skills": ["Managing Tools", "Analysetools", "Automatisierungstools"]
+      },
+      {
+        "title": "Zusätzlich",
+        "open": true,
+        "skills": [
+          "Photoshop",
+          "Design: UX/UI Design",
+          "Marketing Strategy Planning",
+          "Email Marketing + Mailchimp"
+        ]
+      }
+    ],
+    "lang": {
+      "title": "Sprachen",
+      "skills": {
+        "en": {
+          "title": "Englisch",
+          "code": "En",
+          "level": "Englisch (B2 - IELTS)"
+        },
+        "ru": {
+          "title": "Russisch",
+          "code": "Ru",
+          "level": "Russisch (Mutersprache)"
+        },
+        "de": { "title": "Deutsch", "code": "De", "level": "Deutsch (C1)" }
+      }
+    }
+  },
+  "experience": {
+    "title": "Lebenslauf",
+    "txt1": "Verantwortungsbereiche",
+    "jobs": [
+      {
+        "id": 13,
+        "from": "2020 März",
+        "to": "2021 August",
+        "title": "SAP Entwickler",
+        "company": "Axians",
+        "location": "Linz, Österreich",
+        "description": "SAP Entwickler im HR SAP-Modul.",
+        "aor": [
+          {
+            "title": "Automatisierung der Operationsprocessen via SAP",
+            "list": [
+              "Datenbearbeitung: SAP",
+              "Automatisierung der operation Prozessen: Hochladen/Herunterladen der Daten",
+              "Automatisierung von Datenverarbeitungsprozessen (Hintergrund Script)"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "from": "2019 Juni",
+        "to": "2020 Februar",
+        "title": "B2B-Plattform Entwicklung & Datenverarbeitung",
+        "company": "Swarovski",
+        "location": "Wattens, Österreich",
+        "description": "Design-Prototypes-Database development, Data Proccessing.",
+        "aor": [
+          {
+            "title": "VBA Scripts Entwicklung für:",
+            "list": [
+              "Datenbearbeitung: SAP und Excel",
+              "Automatisierung der Datenverarbeitung in Excel",
+              "Entwicklung der Excel VBA benutzerdefinierten Funktionen",
+              "Automatisierung des Outlook-E-Mail-Verkehrs"
+            ]
+          },
+          {
+            "title": "Anwendung und Test der Integrationstools für SAP und Excel von Drittanbietern, wie z.B. \"Process Runner\" von \"Innowera\"",
+            "list": []
+          },
+          {
+            "title": "Lieferanten Anfragen: schriftlich und telefonisch",
+            "list": []
+          },
+          {
+            "title": "SAP – Einpflegung/Überprüfung der Material-Infosätzen (manuell)",
+            "list": []
+          },
+          { "title": "Erstellung der Fortschritt Diagrammen", "list": [] }
+        ]
+      },
+      {
+        "id": 11,
+        "from": "2019 Oktober",
+        "to": "2020 März",
+        "title": "Product Owner",
+        "company": "PROPSTER - Sonderwunsch Meister GmbH",
+        "link": "https://propster.tech/en/",
+        "location": "Wien, Österreich",
+        "description": "IT-Projektmanager in einem Startup. Das Projekt zielt darauf ab, eine Online-Plattform zur Optimierung der Verwaltung von Immobilienentwicklungen zu entwickeln, um die Einnahmen zu steigern, Prozesse zu digitalisieren und die Interaktion mit Ihren Käufern, Investoren und Grundbesitzern zu verbessern.",
+        "aor": [
+          {
+            "title": "Projekt Management",
+            "list": [
+              "Backlog Management (Jira)",
+              "User-Stories Entdeckung und Dokumentation der neuen Features für die Plattform",
+              "Sprints Planung (Agile: Scrum/Kanban)",
+              "Laufende Unterstützung der Plattform - Produktdatenbankverwaltung (Massenimport/-export), QA-Testing"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "from": "2019 Jänner",
+        "to": "2019 Juni",
+        "title": "IT Freelance",
+        "company": "verschiedene Unternehmen",
+        "link": "",
+        "location": "Home Office",
+        "description": "",
+        "aor": [
+          { "title": "Webentwicklung", "list": [] },
+          { "title": "SEO Beratung", "list": [] }
+        ]
+      },
+      {
+        "id": 9,
+        "from": "2017 Jänner",
+        "to": "2018 Mai",
+        "title": "IT Projekt Manager/SEO",
+        "company": "Rupertus Apotheke",
+        "link": "",
+        "location": "Tirol, Österreich",
+        "description": "Unterstützung eines bestehenden Online-Shop und entwickelung eines neuen mit mehr als 180.000 Produkten.",
+        "aor": [
+          {
+            "title": "Projekt Management des neuen Online-Shops.",
+            "list": [
+              "Webentwicklung eines Online-Apothekenshops mit über 180.000 Produkten: von der technischen Aufgabe, Produkte/Inhalte bis hin zur Abfüllung, Prüfung und Design!",
+              "Online-Marketing/SEO: Mikrodaten, schema.org , Geschwindigkeitsverbesserungen etc.",
+              "Google Analytics",
+              "Google Webmaster",
+              "Mobile Web Design Optimization",
+              "Social Marketing: Strategie Entwicklung",
+              "Analyse der Wettbewerber",
+              "E-Mail-Marketing: Design, Layout Entwicklung, Analyse",
+              "Content Management für 180.000 Produkte"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "from": "2016 Juli",
+        "to": "2016 Dezember",
+        "title": "Merchandiser",
+        "company": "BMS GmbH",
+        "link": "",
+        "location": "Graz, Österreich",
+        "description": "Merchandising in 12 Libro Branches in Styria (Österreich)",
+        "aor": [{ "title": "", "list": [] }]
+      },
+      {
+        "id": 7,
+        "from": "2016 Februar",
+        "to": "2016 April",
+        "title": "Online Shop Manager/SEO Experte",
+        "company": "GVS Österreich e.U.",
+        "link": "",
+        "location": "Wien, Österreich",
+        "description": "Online-Shop-Manager/SEO. Weiterentwicklung einer Online-Plattform. Suchmaschinenoptimierung. Backlog-Management und Kommunikation mit dem Entwicklungsteam.",
+        "aor": [
+          {
+            "title": "Online Shop Manager",
+            "list": [
+              "Design-Aktualisierungen",
+              "Content Management",
+              "Trends Anerkennung",
+              "SEO",
+              "Website- und Online-Shop-Analyse: Traffic, Trends, neue Marktanforderungen, Wettbewerbsanalyse.",
+              "Google Adwords"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "from": "2014 Juni",
+        "to": "2016 Juni",
+        "title": "CEO und Besitzer von Lux-Exchange.com",
+        "company": "Lux Exchange e.U.",
+        "link": "",
+        "location": "Graz, Austria",
+        "description": "Lux-Exchange.com - war ein ehrgeiziges Startup. Unser Ziel war es,die teuersten und außergewöhnlichsten Produkte und Dienstleistungen der Welt auf einer Online-Plattform zusammenzubringen. Als besitzer war ich zwischen anderem verantwortlich für die Entwicklung des Online-Shops, die Kommunikation mit Partnern.",
+        "aor": [
+          {
+            "title": "Projekt Management",
+            "list": [
+              "Marketing/Online Marketing",
+              "Web Design",
+              "Teamkoordination (remote): Programmierer und Designer",
+              "Verhandlungen mit den Partnern (Herstellern)",
+              "Analyse der Wettbewerber",
+              "Marketing Strategieplanung",
+              "SEO",
+              "Copywriting in 3 Sprachen: Englisch, Deutsch, Russisch",
+              "Übersetzung (Deutsch, Englisch und Russisch)"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "from": "2013 Dezember",
+        "to": "2014 Mai",
+        "title": "Unabhängiger Web Search Engine Consultant",
+        "company": "Appen Butler-Hill",
+        "link": "https://appen.com/",
+        "location": "Home Office, USA",
+        "description": "Monitoring und Auswertung von Webinhalten... (NDA).",
+        "aor": [{ "title": "", "list": [] }]
+      },
+      {
+        "id": 4,
+        "from": "2013 Juni",
+        "to": "2013 November",
+        "title": "Director's Assistent",
+        "company": "ITV GmbH",
+        "link": "",
+        "location": "Graz, Österreich",
+        "description": "Grundlegende Unterstützung in der täglichen Verkaufsroutine.",
+        "aor": [
+          {
+            "title": "Sales Supporter",
+            "list": [
+              "Verhandlungen mit den Kunden",
+              "Angebotskalkulationen",
+              "Buchhaltung Unterstützung"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "from": "2013 Februar",
+        "to": "2013 März",
+        "title": "Mystery Buyer",
+        "company": "Bare International",
+        "link": "www.bareinternational.com",
+        "location": "Graz, Austria",
+        "description": "Besuchen der verschiedenen Geschäfte, Cafes und Restaurants, um zu überprüfen, ob die Berater ihre Arbeit richtig machen - wie es in den Regeln heißt. Während der Arbeit habe ich das professionelle 9-Niveau erreicht (9 von 10). Cafes und Restaurants, um zu überprüfen, ob die Berater ihre Arbeit richtig machen - wie es in Vorschriften heißt. Bei der Arbeit habe ich das 9. professionelle Niveau erreicht (9 von 10).",
+        "aor": [{ "title": "", "list": [] }]
+      },
+      {
+        "id": 2,
+        "from": "2008 September",
+        "to": "2012 September",
+        "title": "Trader",
+        "company": "Alor Broker",
+        "link": "www.alorbroker.ru",
+        "location": "Perm, Russia",
+        "description": "Wir haben neue Arbitrage-Strategien auf dem russischen Aktienmarkt entwickelt und nach den Strategien gehandelt.",
+        "aor": [{ "title": "", "list": [] }]
+      },
+      {
+        "id": 1,
+        "from": "2008 März",
+        "to": "2008 September",
+        "title": "Kellner",
+        "company": "Amaks Hotels",
+        "link": "www.amaks-hotels.ru",
+        "location": "Perm, Russia",
+        "description": "Als Student in Russland habe ich in einem Restaurant gearbeitet.",
+        "aor": [{ "title": "", "list": [] }]
+      }
+    ]
+  },
+  "education": {
+    "title": "Ausbildung:",
+    "txt1": "Kursübersicht",
+    "courses": [
+      {
+        "id": 5,
+        "title": "Web-Developer",
+        "desctiption": "Web-Developer: HTML/CSS/PHP",
+        "organisation": "Geekbrains",
+        "link": "https://gb.ru/",
+        "location": "online",
+        "from": "2018",
+        "to": "2018",
+        "topics": [
+          { "title": "HTML", "list": ["HTML/CSS", "HTML5/CSS3"] },
+          {
+            "title": "JavaScript",
+            "list": ["JavaScript level 1", "JavaScript level 2"]
+          },
+          { "title": "PHP", "list": ["PHP level 1", "PHP level 2"] },
+          { "title": "Database Basics", "list": [] }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Online Marketing",
+        "desctiption": "WEB- und Social Media-Marketing Management",
+        "organisation": "WiFi Steiermark",
+        "link": "https://www.stmk.wifi.at/kurs/31950x-web-und-social-media-marketing-management",
+        "location": "Graz, Österreich",
+        "from": "2016",
+        "to": "2016",
+        "topics": [
+          {
+            "title": "SEM",
+            "list": [
+              "SEO: Onpage-, Offpage-Optimierung, Linkaufbau, Mikrodaten...",
+              "SEA: Google Adwords"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Associate-Abschluss in Betriebswirtschaftslehre",
+        "desctiption": "Mehrere Kurse an der Fakultät für Betriebswirtschaftslehre. Das Studium wurde nach 3 Jahren Ausbildung unterbrochen, weil ich beschlossen habe, meinen Karriereweg zu IT zu ändern.",
+        "organisation": "Karl-Franzens University",
+        "link": "https://www.stmk.wifi.at/kurs/31950x-web-und-social-media-marketing-management",
+        "location": "Graz, Austria",
+        "from": "2012",
+        "to": "2015",
+        "topics": [{ "title": "", "list": [] }]
+      },
+      {
+        "id": 2,
+        "title": "German courses",
+        "desctiption": "German courses at Vorstudienlehrgang (School at the University)",
+        "organisation": "School by the Karl-Franzens University",
+        "link": "",
+        "location": "Graz, Austria",
+        "from": "2010",
+        "to": "2012",
+        "topics": [{ "title": "Deutsch", "list": ["A1", "A2", "B1", "B2/C1"] }]
+      },
+      {
+        "id": 1,
+        "title": "Economics",
+        "desctiption": "Associate's degree in Business Administration and Master of Economics",
+        "organisation": "Finished 6 semesters with certificate. Then I moved to Austria, where I continued the study.",
+        "link": "https://www.stmk.wifi.at/kurs/31950x-web-und-social-media-marketing-management",
+        "location": "Perm, Russia",
+        "from": "2005",
+        "to": "2009",
+        "topics": [{ "title": "", "list": [] }]
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "projects": [
+      {
+        "id": 4,
+        "title": "JavaScript",
+        "list": [
+          {
+            "description": "Snake (browser game)",
+            "link": "https://i2tpm.csb.app/"
+          },
+          {
+            "description": "Battleship (browser game)",
+            "link": "https://mh1rb.csb.app/"
+          },
+          {
+            "description": "TicTacToe (browser game)",
+            "link": "https://rugre.csb.app/"
+          },
+          { "description": "Chess Table", "link": "https://r67gg.csb.app/" }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "VueJS2/3",
+        "list": [
+          {
+            "description": "VueJS-2: Simple Table Overview",
+            "link": "https://kv9hg.csb.app/"
+          },
+          {
+            "description": "VueJS-3: ReactionTimer - webNinja",
+            "link": "https://osmnmz.csb.app/"
+          },
+          { "description": "VueJS-3: Online CV", "link": "/#" }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "HTML5/CSS3",
+        "list": [
+          {
+            "description": "HTML5/CSS3 - responsive design",
+            "link": "http://cv.lux-exchange.com/portfolio/waxom_landingpage/"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "title": "OpenCart (online shop CMS)",
+        "list": [
+          {
+            "description": "BlogStore.io - platform for bloggers and vloggers",
+            "link": "https://www.blogstore.io/"
+          },
+          {
+            "description": "Lux Exchange - online shop for the millionairs",
+            "link": "http://lux-exchange.com/"
+          },
+          {
+            "description": "Online Pharmacy Shop (180.000 Products)",
+            "link": "#"
+          }
+        ]
+      }
+    ]
+  }
+}
