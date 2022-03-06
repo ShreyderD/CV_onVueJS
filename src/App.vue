@@ -1,5 +1,5 @@
 <template>
-<!-- <button @click="$store.dispatch('actConsole')"></button> -->
+	<p>{{error}}</p>
  <div v-if="$store.state.db">
   <Header />
     <div class="container">
@@ -15,7 +15,7 @@
                     <p class="ancor-text">{{ $store.state.db.routelinks.keyskills }}</p>
                   </router-link>
                 </div>
-              </div>
+              </div>C
                 <div class="ancor-item">
                   <div class="item-box">
                     <router-link :to="{ name: 'Experience', params: { id: $store.state.activeLang } }">
@@ -56,7 +56,6 @@
 <script type="text/javascript">
 import Header from '@/components/Header.vue'
 import PersonalInfo from '@/components/PersonalInfo'
-import axios from 'axios'
 
 export default {
   name: 'App',
@@ -66,6 +65,7 @@ export default {
   },
   beforeCreate() {
     this.$store.commit('getDB')
+    this.$store.dispatch('actConsole')
   }
   // async created() {
   //       try {
