@@ -19,15 +19,13 @@ export default createStore({
         state.dburl = `/data/db_de.json`
       }
 
-      //on dev server (via json-server watch ../db.json) -> disable this line on prodVersion
+      //on DEV server (via json-server watch .../data/db.json) -> disable this line on prodVersion
       //***********************************************************************
-      state.dburl = `http://localhost:3000/${state.activeLang}` 
+      state.dburl = `http://localhost:3000/${state.activeLang}`  //-> disable this line on prodVersion
       // console.log('STORE URL:', state.dburl)
 
-      // state.analyticURL = "http://localhost:3000/locations"
-      state.analyticURL = `/data/webanalytics.json`
-
-
+      state.analyticURL = "http://localhost:3000/locations"      //-> disable this line on prodVersion
+      // state.analyticURL = `/data/webanalytics.json/locations`
       //***********************************************************************
 
 
@@ -111,7 +109,7 @@ export default createStore({
       //v-2: ASYNCHRONE POST request:
       const postData = async (data) => {
         try{
-          const postLocation = await axios.post("http://localhost:3000/locations", { 
+          const postLocation = await axios.post(this.state.analyticURL, { 
             country: data.location.data.country_name,
             city: data.location.data.city,
             date: data.date,
@@ -125,7 +123,18 @@ export default createStore({
       getCountry().then((location) => {
         if(this.state.ip === null) {
           commit('setIP', location.data.ip)
-          postData({ location, date, time })
+          console.log("this.state.analyticURL:", this.state.analyticURL)
+          console.log("this.state.ip:", this.state.ip)
+          console.log("location.data.ip:", location.data.ip)
+          console.log("location:", location.data.city)
+          console.log("date:", date)
+          console.log("time:", time)
+          try{
+            postData({ location, date, time })
+          }catch(err) {
+            console.error(err)
+          }
+
         }
       })
 

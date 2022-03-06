@@ -6,27 +6,6 @@
       "city": "Vienna",
       "date": "Sat Mar 05 2022 19:14:56 GMT+0100 (Central European Standard Time)",
       "time": "08:00:00"
-    },
-    {
-      "country": "Austria",
-      "city": "Vienna",
-      "date": "06/03/2022",
-      "time": "10:41:02 GMT+0100 (Central European Standard Time)",
-      "id": 1
-    },
-    {
-      "country": "Austria",
-      "city": "Vienna",
-      "date": "06/03/2022",
-      "time": "10:42:40 GMT+0100 (Central European Standard Time)",
-      "id": 2
-    },
-    {
-      "country": "Austria",
-      "city": "Vienna",
-      "date": "06/03/2022",
-      "time": "10:46:29 GMT+0100 (Central European Standard Time)",
-      "id": 3
     }
   ]
 }
