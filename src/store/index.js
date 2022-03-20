@@ -1,5 +1,6 @@
 import { createStore } from 'vuex'
 import axios from 'axios'
+import router from '../router'
 
 export default createStore({
   state: {
@@ -8,24 +9,41 @@ export default createStore({
     db: null,
     error: null,
     analyticURL: null,
-	  ip: null
+	  ip: null,
+    formData: {
+      country: "USA",
+      city: "New-York",
+      date: "09.03.2022",
+      time: "09:45"
+    }
   },
   mutations: {
     getDB(state) {
-      if(state.activeLang === 'EN') {
-        state.dburl = `/data/db_en.json`
-        // const url = `/data/db.json`
-      } else if(state.activeLang === 'DE') {
-        state.dburl = `/data/db_de.json`
+
+      //Development Vs. Production URLs ***************************************
+      if (window.location.href.includes("local")) {
+        console.log(window.location.href)
+
+        //path to main DB Json
+        state.dburl = `http://localhost:3000/${state.activeLang}`
+        console.log('STORE URL:', state.dburl)
+
+        //path to web analytics
+        state.analyticURL = "http://localhost:3000/locations"
+
+      } else {
+
+        //path to main DB Json
+        if(state.activeLang === 'EN') {
+          state.dburl = `/data/db_en.json`
+          // const url = `/data/db.json`
+        } else if(state.activeLang === 'DE') {
+          state.dburl = `/data/db_de.json`
+        }
+
+        //path to web analytics
+        state.analyticURL = `/data/webanalytics.json`
       }
-
-      //on DEV server (via json-server watch .../data/db.json) -> disable this line on prodVersion
-      //***********************************************************************
-      state.dburl = `http://localhost:3000/${state.activeLang}`  //-> disable this line on prodVersion
-      // console.log('STORE URL:', state.dburl)
-
-      state.analyticURL = "http://localhost:3000/locations"      //-> disable this line on prodVersion
-      // state.analyticURL = `/data/webanalytics.json/locations`
       //***********************************************************************
 
 
@@ -44,7 +62,7 @@ export default createStore({
           // console.error(err)
         }
       }
-      loadData(state.dburl)
+      //loadData(state.dburl)
       // .then(() => console.log(state.db.personal.title))
     },
     chooseLanguage(state, e) {
@@ -66,9 +84,100 @@ export default createStore({
 
     }
   },
+
+
   actions: {
     //Get Date, Time & Location and POST
     actConsole({commit}) {
+
+      const test = async () => {
+        try {
+          // let axiosConfig = {
+          //   headers: {
+          //       'Content-Type': 'application/json;charset=UTF-8',
+          //       "Access-Control-Allow-Origin": "*",
+          //   }
+          // };
+
+          //   const rest = await axios.get(`http://localhost:3000/locations`
+          //   , {
+            //     params: {
+              //       "country": "USA"
+              //     }
+              //   }
+              // )
+              //   console.log(rest)
+              //   console.log(rest.data)
+              //   console.log(rest.data.locations)
+              //   console.log(rest.data.locations[0])
+              
+          // const res = axios.post(`/data/webanalytics.json`, { 
+            // const res = axios.post(`http://localhost:3000/dev_webanalytics.json`, { 
+              
+              
+              // const res = axios.post(`http://localhost:3000/locations`, this.state.formData, axiosConfig)
+              // const res = axios.post(`/data/webanalytics.json`, this.state.formData, axiosConfig)
+              
+              
+              // const res = await axios.get(`/data/webanalytics.json`)
+          const res = await axios.post(this.state.analyticURL, this.state.formData)
+
+          console.log("path: ", this.state.analyticURL)
+          console.log("Axios Promise Response:")
+          console.log(res.data)
+          
+        } catch(err) {
+            console.error(err)
+        }
+
+        try {
+          const res = await axios({
+            method: 'post',
+            url: this.state.analyticURL,
+            data: JSON.stringify({
+              country: "USA",
+              city: "New-York",
+              date: "09.03.2022",
+              time: "09:4500"
+            })
+          })
+          console.log("Axios Promise Response:")
+          console.log(res)
+          console.log("Axios Promise Response:")
+          console.log(res.data)
+          
+        } catch(err) {
+          console.error(err)
+        }
+
+/*********************************************************************** */
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", this.state.analyticURL);
+
+      xhr.setRequestHeader("Content-Type", "application/json");
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            console.log(xhr.status);
+            console.log(xhr.responseText);
+        }};
+
+      var data = `{
+        "country": 1,
+        "city": "John Smith",
+        "data": "10.00",
+        "time": "10:00"
+      }`;
+
+      xhr.send(data);
+/*********************************************************************** */
+
+    }
+
+    test();
+
+      // return 1;
+
       //Get Date:
       let thedate = (today) => {
         let dd = String(today.getDate()).padStart(2, '0');
@@ -138,19 +247,17 @@ export default createStore({
         }
       })
 
-
-
       /* ********************************************* */
       //Trash: example of using the Axios get requests
-      try {
+      // try {
         // console.log('saying GM from store.actions!')
         //v-1: via try-catch-await
         // const res = await axios.get(`https://www.random.org/integers/?num=1&min=1&max=6&col=1&base=10&format=plain&rnd=new`)
         // console.log(res.data)
         // commit('actConsole', res.data)
-      } catch(err) {
-        console.error(err)
-      }
+      // } catch(err) {
+      //   console.error(err)
+      // }
         //v-2: via .then
         // axios(`https://www.random.org/integers/?num=1&min=1&max=6&col=1&base=10&format=plain&rnd=new`)
         // .then((response) => { console.log(response) })

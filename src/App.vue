@@ -15,7 +15,7 @@
                     <p class="ancor-text">{{ $store.state.db.routelinks.keyskills }}</p>
                   </router-link>
                 </div>
-              </div>C
+              </div>
                 <div class="ancor-item">
                   <div class="item-box">
                     <router-link :to="{ name: 'Experience', params: { id: $store.state.activeLang } }">
@@ -66,17 +66,19 @@ export default {
   beforeCreate() {
     this.$store.commit('getDB')
     this.$store.dispatch('actConsole')
+  },
+  mounted() {
+    // console.log('HEADER')
+    // console.log(this.$store.state.db.personal.name)
+    // this.data = this.$store.state.db; // = this.$route.params.id
+  },
+  created(){
+      // console.log(this.$router.currentRoute);
+      // this.uri = this.$route.params.id; //this.$route.query.page; //this.$router.history.current.path //window.location.pathname;
+      // console.log(this.uri);
+      // this.uri = this.$route.query.page
+      // console.log(this.$route.query.page)
   }
-  // async created() {
-  //       try {
-
-  //         const res = await axios(`https://www.random.org/integers/?num=1&min=1&max=6&col=1&base=10&format=plain&rnd=new`)
-  //       // .then((response) => { console.log(response) })
-  //       console.log(res.data)
-  //       } catch(err) {
-  //         console.error(err)
-  //       }
-  // }
 }
 </script>
 

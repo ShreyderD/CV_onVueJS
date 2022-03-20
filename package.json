@@ -2,6 +2,7 @@
   "name": "cv_vue3",
   "version": "0.1.0",
   "private": true,
+  // "proxy": "http://localhost:8080/",   //add this to avoid CORS error using lovalhost
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"

@@ -21,18 +21,7 @@ import Error from '@/components/Error'
 
 export default {
   name: 'Header',
-  components: { Error },
-  mounted() {
-    // console.log('HEADER')
-    // console.log(this.$store.state.db.personal.name)
-    // this.data = this.$store.state.db; // = this.$route.params.id
-  },
-  created(){
-        //this.uri = this.$route.params.id; //this.$route.query.page; //this.$router.history.current.path //window.location.pathname;
-        //console.log(this.uri);
-      // this.uri = this.$route.query.page
-      // console.log(this.$route.query.page)
-  }
+  components: { Error }
 }
 </script>
 
