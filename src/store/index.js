@@ -1,6 +1,5 @@
 import { createStore } from 'vuex'
 import axios from 'axios'
-import router from '../router'
 
 export default createStore({
   state: {
@@ -264,6 +263,7 @@ export default createStore({
         // // console.log(res.data)
 
 
+      // "proxy": "http://localhost:8080/",   //add this to avoid CORS error using lovalhost
 
 
     }
