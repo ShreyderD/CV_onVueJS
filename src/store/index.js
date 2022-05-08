@@ -45,8 +45,7 @@ export default createStore({
       }
       //***********************************************************************
 
-
-
+      //loading Json Data from chosen Language: EN/DE
       const loadData = async (url) => {
         try{
           let request = await fetch(url)
@@ -61,7 +60,7 @@ export default createStore({
           // console.error(err)
         }
       }
-      //loadData(state.dburl)
+      loadData(state.dburl)
       // .then(() => console.log(state.db.personal.title))
     },
     chooseLanguage(state, e) {
@@ -98,8 +97,7 @@ export default createStore({
           //   }
           // };
 
-          //   const rest = await axios.get(`http://localhost:3000/locations`
-          //   , {
+          //   const rest = await axios.get(`http://localhost:3000/locations`, {
             //     params: {
               //       "country": "USA"
               //     }
@@ -111,140 +109,160 @@ export default createStore({
               //   console.log(rest.data.locations[0])
               
           // const res = axios.post(`/data/webanalytics.json`, { 
-            // const res = axios.post(`http://localhost:3000/dev_webanalytics.json`, { 
-              
-              
-              // const res = axios.post(`http://localhost:3000/locations`, this.state.formData, axiosConfig)
-              // const res = axios.post(`/data/webanalytics.json`, this.state.formData, axiosConfig)
-              
-              
-              // const res = await axios.get(`/data/webanalytics.json`)
-          const res = await axios.post(this.state.analyticURL, this.state.formData)
+          // const res = axios.post(`http://localhost:3000/dev_webanalytics.json`, {  
+          // const res = axios.post(`http://localhost:3000/locations`, this.state.formData, axiosConfig)
+          // const res = axios.post(`/data/webanalytics.json`, this.state.formData, axiosConfig)
+          // const res = await axios.get(`/data/webanalytics.json`)
 
+          const res = await axios({
+            method: 'post',
+            url: this.state.analyticURL,
+            data: this.state.formData       // JSON.stringify(
+          })
+          console.log("START res.status");
+
+          console.log("res.status:", res.status);
+          console.log("res.responseText:", res.responseText);
           console.log("path: ", this.state.analyticURL)
           console.log("Axios Promise Response:")
           console.log(res.data)
           
+          console.log("END res.status");
         } catch(err) {
             console.error(err)
         }
 
-        try {
-          const res = await axios({
-            method: 'post',
-            url: this.state.analyticURL,
-            data: JSON.stringify({
-              country: "USA",
-              city: "New-York",
-              date: "09.03.2022",
-              time: "09:4500"
-            })
-          })
-          console.log("Axios Promise Response:")
-          console.log(res)
-          console.log("Axios Promise Response:")
-          console.log(res.data)
+        // try {
+        //   const res = await axios({
+        //     method: 'post',
+        //     url: this.state.analyticURL,
+        //     data: JSON.stringify({
+        //       country: "USA",
+        //       city: "New-York",
+        //       date: "09.03.2022",
+        //       time: "09:45"
+        //     })
+        //   })
+        //   console.log("Axios Promise Response:")
+        //   console.log(res)
+        //   console.log("Axios Promise Response Data:")
+        //   console.log(res.data)
           
-        } catch(err) {
-          console.error(err)
-        }
+        // } catch(err) {
+        //   console.error(err)
+        // }
 
 /*********************************************************************** */
-      var xhr = new XMLHttpRequest();
-      xhr.open("POST", this.state.analyticURL);
+        // var xhr = new XMLHttpRequest();
+        // xhr.open("POST", this.state.analyticURL);
 
-      xhr.setRequestHeader("Content-Type", "application/json");
+        // xhr.setRequestHeader("Content-Type", "application/json");
 
-      xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-            console.log(xhr.status);
-            console.log(xhr.responseText);
-        }};
+        // xhr.onreadystatechange = function () {
+        //   if (xhr.readyState === 4) {
+        //       // console.log(xhr.status);
+        //       // console.log(xhr.responseText);
+        //   }};
 
-      var data = `{
-        "country": 1,
-        "city": "John Smith",
-        "data": "10.00",
-        "time": "10:00"
-      }`;
+        // var data = `{
+        //   "country": 1,
+        //   "city": "John Smith",
+        //   "data": "10.00",
+        //   "time": "10:00"
+        // }`;
 
-      xhr.send(data);
+        // xhr.send(data);
+/*********************************************************************** */
+
+      // // fetch('https://jsonplaceholder.typicode.com/posts', {
+      // fetch(this.state.analyticURL, {
+      //   method: 'POST',
+      //   body: JSON.stringify({
+      //     country: 'foo',
+      //     city: 'bar',
+      //     data: '01.01.2022',
+      //     time: '10:00'
+      //   }),
+      //   headers: {
+      //     'Content-type': 'application/json; charset=UTF-8',
+      //   },
+      // })
+      //   .then((response) => response.json())
+      //   .then((json) => console.log(json));
 /*********************************************************************** */
 
     }
 
     test();
 
-      // return 1;
+      //Get Date using API:
+      // let thedate = (today) => {
+      //   let dd = String(today.getDate()).padStart(2, '0');
+      //   let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+      //   let yyyy = today.getFullYear();
+      //   let thedate = dd + '/' + mm + '/' + yyyy;
 
-      //Get Date:
-      let thedate = (today) => {
-        let dd = String(today.getDate()).padStart(2, '0');
-        let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-        let yyyy = today.getFullYear();
-        let thedate = dd + '/' + mm + '/' + yyyy;
+      //   return thedate.toString()
+      // }
 
-        return thedate.toString()
-      }
+      // let date = thedate(new Date());
 
-      let date = thedate(new Date());
-
-      //Get Time:
-      let time = new Date().toTimeString()
+      // //Get Time:
+      // let time = new Date().toTimeString()
       
 
-      //Get Location:
-      const getCountry = async () => {
-        try{
-          const location = await axios.get('https://freegeoip.app/json/')
-          // console.log("Location:", location.data.country_name)
-          return location
-        }catch(err) {
-          console.error(err)
-        }
-      }
+      // //Get Location:
+      // const getCountry = async () => {
+      //   try{
+      //     const location = await axios.get('https://freegeoip.app/json/')
+      //     // console.log("Location:", location.data.country_name)
+      //     return location
+      //   }catch(err) {
+      //     console.error(err)
+      //   }
+      // }
       
-      //POST the data to WebAnalytics JSON:
+      // //POST the data to WebAnalytics JSON:
 
-      //v-1:  SYNCHRONE POST request
-      // const postData = (data) => axios.post("http://localhost:3000/locations", { 
-      //   country: data.location.data.country_name,
-      //   city: data.location.data.city,
-      //   date: data.date,
-      //   time: data.time
+      // //v-1:  SYNCHRONE POST request
+      // // const postData = (data) => axios.post("http://localhost:3000/locations", { 
+      // //   country: data.location.data.country_name,
+      // //   city: data.location.data.city,
+      // //   date: data.date,
+      // //   time: data.time
+      // // })
+
+      // //v-2: ASYNCHRONE POST request:
+      // const postData = async (data) => {
+      //   try{
+      //     const postLocation = await axios.post(this.state.analyticURL, { 
+      //       country: data.location.data.country_name,
+      //       city: data.location.data.city,
+      //       date: data.date,
+      //       time: data.time
+      //     })
+      //   }catch(err) {
+      //     console.error(err)
+      //   }
+      // }
+
+      // getCountry().then((location) => {
+      //   if(this.state.ip === null) {
+      //     commit('setIP', location.data.ip)
+      //     console.log("this.state.analyticURL:", this.state.analyticURL)
+      //     console.log("this.state.ip:", this.state.ip)
+      //     console.log("location.data.ip:", location.data.ip)
+      //     console.log("location:", location.data.city)
+      //     console.log("date:", date)
+      //     console.log("time:", time)
+      //     try{
+      //       postData({ location, date, time })
+      //     }catch(err) {
+      //       console.error(err)
+      //     }
+
+      //   }
       // })
-
-      //v-2: ASYNCHRONE POST request:
-      const postData = async (data) => {
-        try{
-          const postLocation = await axios.post(this.state.analyticURL, { 
-            country: data.location.data.country_name,
-            city: data.location.data.city,
-            date: data.date,
-            time: data.time
-          })
-        }catch(err) {
-          console.error(err)
-        }
-      }
-
-      getCountry().then((location) => {
-        if(this.state.ip === null) {
-          commit('setIP', location.data.ip)
-          console.log("this.state.analyticURL:", this.state.analyticURL)
-          console.log("this.state.ip:", this.state.ip)
-          console.log("location.data.ip:", location.data.ip)
-          console.log("location:", location.data.city)
-          console.log("date:", date)
-          console.log("time:", time)
-          try{
-            postData({ location, date, time })
-          }catch(err) {
-            console.error(err)
-          }
-
-        }
-      })
 
       /* ********************************************* */
       //Trash: example of using the Axios get requests
