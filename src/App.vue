@@ -1,5 +1,5 @@
 <template>
-	<p>{{error}}</p>
+	<p>{{$store.state.error}}</p>
  <div v-if="$store.state.db">
   <Header />
     <div class="container">
@@ -50,6 +50,7 @@
         </div>
       </div>
     </div>
+
   </div>
 </template>
 
