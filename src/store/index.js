@@ -12,8 +12,8 @@ export default createStore({
 	  ip: null,
     geoAPI: 'http://ip-api.com/json/', //https://freegeoip.app/json/
     formData: {
-      country: "USA",
-      city: "New-York"
+      country: "N/A",
+      city: "N/A"
     }
   },
   mutations: {
