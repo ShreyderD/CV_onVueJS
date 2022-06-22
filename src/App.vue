@@ -84,8 +84,8 @@ export default {
     // console.log(this.$store.state.db.personal.name)
     // this.data = this.$store.state.db; // = this.$route.params.id
 
-    this.getFB()
     this.createEntry()
+    this.getFB()
   },
   created(){
       // console.log(this.$router.currentRoute);
@@ -114,22 +114,14 @@ export default {
     },
     async createEntry(){
       const db = getFirestore()   //init firebase services
-      const colRef = collection(db, 'webanalytics') //getting the specific "collectiion" from the FB
-      addDoc(collection(db, 'webanalytics'), {
-        date: {
-          seconds: 1655906444,
-          nanoseconds: 0
-        }
-      });
-      //console.log("Document written with ID: ", docRef.id);
-
       const docRef = await addDoc(collection(db, 'webanalytics'), {
         date: {
           seconds: 1600000000,
           nanoseconds: 0
         }
-      });
-      console.log("Document written with ID: ", docRef.id);
+      })
+      .then( (i) => console.log("Document written with ID: ", i.id))
+      .catch((err) => console.log(err.message));
     }
   }
 }
