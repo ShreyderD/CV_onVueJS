@@ -57,9 +57,18 @@
 <script type="text/javascript">
 import Header from '@/components/Header.vue'
 import PersonalInfo from '@/components/PersonalInfo'
+import { 
+  getFirestore, collection, getDocs,
+  addDoc 
+} from 'firebase/firestore'
 
 export default {
   name: 'App',
+  data() {
+    return {
+      webanalytics: []
+    }
+  },
   components: {
     Header,
     PersonalInfo
@@ -67,11 +76,16 @@ export default {
   beforeCreate() {
     this.$store.commit('getDB')
     this.$store.dispatch('actConsole')
+
+
   },
   mounted() {
     // console.log('HEADER')
     // console.log(this.$store.state.db.personal.name)
     // this.data = this.$store.state.db; // = this.$route.params.id
+
+    this.getFB()
+    this.createEntry()
   },
   created(){
       // console.log(this.$router.currentRoute);
@@ -79,6 +93,44 @@ export default {
       // console.log(this.uri);
       // this.uri = this.$route.query.page
       // console.log(this.$route.query.page)
+  },
+  methods: {
+    getFB(){
+      console.log('FB is being grabbed')
+      const db = getFirestore()   //init firebase services
+      const colRef = collection(db, 'webanalytics') //getting the specific "collectiion" from the FB
+      getDocs(colRef)
+      .then( (snapshot) => {
+        //v-1:
+          snapshot.docs.forEach( (item) => { 
+            this.webanalytics.push({...item.data(), id: item.id}) 
+          })
+        //v-2: simple waybut not ideal!
+        // this.webanalytics = [...snapshot.docs] 
+        console.log(JSON.parse(JSON.stringify(this.webanalytics)))
+        this.webanalytics.forEach( (item) => console.log(JSON.parse(JSON.stringify(item.date))))
+      })
+      .catch( (err) => { console.log(err.message) })
+    },
+    async createEntry(){
+      const db = getFirestore()   //init firebase services
+      const colRef = collection(db, 'webanalytics') //getting the specific "collectiion" from the FB
+      addDoc(collection(db, 'webanalytics'), {
+        date: {
+          seconds: 1655906444,
+          nanoseconds: 0
+        }
+      });
+      //console.log("Document written with ID: ", docRef.id);
+
+      const docRef = await addDoc(collection(db, 'webanalytics'), {
+        date: {
+          seconds: 1600000000,
+          nanoseconds: 0
+        }
+      });
+      console.log("Document written with ID: ", docRef.id);
+    }
   }
 }
 </script>
