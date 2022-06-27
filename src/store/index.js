@@ -1,5 +1,9 @@
 import { createStore } from 'vuex'
 import axios from 'axios'
+import { 
+  getFirestore, collection, getDocs,
+  addDoc 
+} from 'firebase/firestore'
 
 export default createStore({
   state: {
@@ -8,6 +12,7 @@ export default createStore({
     db: null,
     error: null,
     analyticURL: null,
+    webanalytics: [],
     ipAPI: 'https://jsonip.com/',
 	  ip: null,
     geoAPI: 'http://ip-api.com/json/', //https://freegeoip.app/json/
@@ -169,6 +174,19 @@ export default createStore({
         // .then((response) => { console.log(response) })
         // console.log(res.data)       
       // "proxy": "http://localhost:8080/",   //add this to avoid CORS error using localhost
+    },
+    getFB({commit}){
+      const db = getFirestore()   //init firebase services
+      const colRef = collection(db, 'webanalytics') //getting the specific "collectiion" from the FB
+      getDocs(colRef)
+      .then( (snapshot) => {
+          snapshot.docs.forEach( (item) => { 
+            this.state.webanalytics.push({...item.data(), id: item.id}) 
+          })
+        console.log(JSON.parse(JSON.stringify(this.state.webanalytics)))
+        this.state.webanalytics.forEach( (item) => console.log(JSON.parse(JSON.stringify(item.date))))
+      })
+      .catch( (err) => { console.log(err.message) })
     }
   },
   getters: {

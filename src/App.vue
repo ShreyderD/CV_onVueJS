@@ -64,11 +64,6 @@ import {
 
 export default {
   name: 'App',
-  data() {
-    return {
-      webanalytics: []
-    }
-  },
   components: {
     Header,
     PersonalInfo
@@ -76,6 +71,7 @@ export default {
   beforeCreate() {
     this.$store.commit('getDB')
     this.$store.dispatch('actConsole')
+    this.$store.dispatch('getFB')
   },
   mounted() {
     // console.log('HEADER')
@@ -92,7 +88,7 @@ export default {
       // console.log(this.$route.query.page)
 
       this.createEntry()
-      this.getFB()
+      //this.getFB()
   },
   methods: {
     getFB(){
@@ -101,10 +97,10 @@ export default {
       getDocs(colRef)
       .then( (snapshot) => {
           snapshot.docs.forEach( (item) => { 
-            this.webanalytics.push({...item.data(), id: item.id}) 
+            this.$store.state.webanalytics.push({...item.data(), id: item.id}) 
           })
-        console.log(JSON.parse(JSON.stringify(this.webanalytics)))
-        this.webanalytics.forEach( (item) => console.log(JSON.parse(JSON.stringify(item.date))))
+        console.log(JSON.parse(JSON.stringify(this.$store.state.webanalytics)))
+        this.$store.state.webanalytics.forEach( (item) => console.log(JSON.parse(JSON.stringify(item.date))))
       })
       .catch( (err) => { console.log(err.message) })
     },
