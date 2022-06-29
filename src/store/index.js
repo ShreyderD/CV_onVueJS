@@ -97,7 +97,7 @@ export default createStore({
       try {
         //get details
         let apiKey = '1525fa7c23de4fbf8f7afa8b37ffe11d';
-        const getIP = await axios.get(`https://ipgeolocation.abstractapi.com/v1/?api_key=${apiKey}`) // console.log(getIP.data)
+        const getIP = await axios.get(`https://ipgeolocation.abstractapi.com/v1/?api_key=${apiKey}`) // console.log(getIP.data) //https://app.abstractapi.com/api/ip-geolocation/tester
 
         const docRef = await addDoc(collection(db, 'webstat'), {
           data: {
