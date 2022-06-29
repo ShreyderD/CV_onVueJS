@@ -85,7 +85,7 @@ export default createStore({
           snapshot.docs.forEach( (item) => { 
             commit('mutateFB', item)
           })
-        console.log(JSON.parse(JSON.stringify(this.state.webstat)))
+        //console.log(JSON.parse(JSON.stringify(this.state.webstat)))
         //this.state.webstat.forEach( (item) => console.log(JSON.parse(JSON.stringify(item.date))))
       })
       .catch( (err) => { console.log(err.message) })
@@ -106,7 +106,8 @@ export default createStore({
             details: getIP.data
           }
         })
-        console.log("Document has been written with ID: ", docRef.id)
+        //console.log("Document has been written with ID: ", docRef.id)
+
         //.then( (i) => console.log("Document has been written with ID: ", i.id))  - if we use no "await"
         //.catch((err) => console.log(err.message));  - if we use no "await"
       } catch(err) {
