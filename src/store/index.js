@@ -1,6 +1,6 @@
 import { createStore } from 'vuex'
 import axios from 'axios'
-
+import firebase from '../firebase'           // console.log(firebase)
 import { 
   getFirestore, collection, 
   getDocs, addDoc 
