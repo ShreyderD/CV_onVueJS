@@ -57,10 +57,6 @@
 <script type="text/javascript">
 import Header from '@/components/Header.vue'
 import PersonalInfo from '@/components/PersonalInfo'
-import { 
-  getFirestore, collection, getDocs,
-  addDoc 
-} from 'firebase/firestore'
 
 export default {
   name: 'App',
@@ -70,15 +66,13 @@ export default {
   },
   beforeCreate() {
     this.$store.commit('getDB')
-    this.$store.dispatch('actConsole')
+    this.$store.dispatch('createEntry')
     this.$store.dispatch('getFB')
   },
   mounted() {
     // console.log('HEADER')
     // console.log(this.$store.state.db.personal.name)
-    // this.data = this.$store.state.db; // = this.$route.params.id
-
- 
+    // this.data = this.$store.state.db; // = this.$route.params.id 
   },
   created(){
       // console.log(this.$router.currentRoute);
@@ -86,35 +80,6 @@ export default {
       // console.log(this.uri);
       // this.uri = this.$route.query.page
       // console.log(this.$route.query.page)
-
-      this.createEntry()
-      //this.getFB()
-  },
-  methods: {
-    getFB(){
-      const db = getFirestore()   //init firebase services
-      const colRef = collection(db, 'webanalytics') //getting the specific "collectiion" from the FB
-      getDocs(colRef)
-      .then( (snapshot) => {
-          snapshot.docs.forEach( (item) => { 
-            this.$store.state.webanalytics.push({...item.data(), id: item.id}) 
-          })
-        console.log(JSON.parse(JSON.stringify(this.$store.state.webanalytics)))
-        this.$store.state.webanalytics.forEach( (item) => console.log(JSON.parse(JSON.stringify(item.date))))
-      })
-      .catch( (err) => { console.log(err.message) })
-    },
-    createEntry(){
-      const db = getFirestore()   //init firebase services
-      addDoc(collection(db, 'webanalytics'), {
-        date: {
-          seconds: 1600000000,
-          nanoseconds: 0
-        }
-      })
-      .then( (i) => console.log("Document written with ID: ", i.id))
-      .catch((err) => console.log(err.message));
-    }
   }
 }
 </script>
