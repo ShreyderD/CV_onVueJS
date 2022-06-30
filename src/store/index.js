@@ -20,18 +20,18 @@ export default createStore({
     formData: {
       country: "N/A",
       city: "N/A"
-    }
+    },
+    currentPage: "null"
   },
   mutations: {
     getDB(state) {
-
       //Development Vs. Production URLs ***************************************
       if (window.location.href.includes("local")) {
-        console.log(window.location.href)
+        //console.log(window.location.href)
 
         //path to main DB Json
         state.dburl = `http://localhost:3000/${state.activeLang}`
-        console.log('STORE URL:', state.dburl)
+        //console.log('STORE URL:', state.dburl)
 
         //path to web analytics
         //state.analyticURL = "http://localhost:3000/locations"
@@ -74,6 +74,9 @@ export default createStore({
     },
     mutateFB(state, item) {
       this.state.webstat.push({...item.data(), id: item.id}) 
+    },
+    currentPage(state, currentPage){
+      this.state.currentPage = currentPage
     }
   },
   actions: {
@@ -91,27 +94,29 @@ export default createStore({
       .catch( (err) => { console.log(err.message) })
     },
     async createEntry(){
-      const currentDate = new Date()
-      const db = getFirestore()   //init firebase services
-
-      try {
-        //get details
-        let apiKey = '1525fa7c23de4fbf8f7afa8b37ffe11d';
-        const getIP = await axios.get(`https://ipgeolocation.abstractapi.com/v1/?api_key=${apiKey}`) // console.log(getIP.data) //https://app.abstractapi.com/api/ip-geolocation/tester
-
-        const docRef = await addDoc(collection(db, 'webstat'), {
-          data: {
-            date: currentDate,
-            dateString: currentDate.toString(),
-            details: getIP.data
-          }
-        })
-        //console.log("Document has been written with ID: ", docRef.id)
-
-        //.then( (i) => console.log("Document has been written with ID: ", i.id))  - if we use no "await"
-        //.catch((err) => console.log(err.message));  - if we use no "await"
-      } catch(err) {
-          console.error(err)
+      if (window.location.href.includes("local")) {
+        const currentDate = new Date()
+        const db = getFirestore()   //init firebase services
+  
+        try {
+          //get details
+          let apiKey = '1525fa7c23de4fbf8f7afa8b37ffe11d';
+          const getIP = await axios.get(`https://ipgeolocation.abstractapi.com/v1/?api_key=${apiKey}`) // console.log(getIP.data) //https://app.abstractapi.com/api/ip-geolocation/tester
+  
+          const docRef = await addDoc(collection(db, 'webstat'), {
+            data: {
+              date: currentDate,
+              dateString: currentDate.toString(),
+              details: getIP.data
+            }
+          })
+          //console.log("Document has been written with ID: ", docRef.id)
+  
+          //.then( (i) => console.log("Document has been written with ID: ", i.id))  - if we use no "await"
+          //.catch((err) => console.log(err.message));  - if we use no "await"
+        } catch(err) {
+            console.error(err)
+        }
       }
     }
   },

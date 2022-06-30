@@ -1,5 +1,6 @@
 <template>
 	<p>{{$store.state.error}}</p>
+	<!-- <p>test: {{ $store.state.currentPage }} - {{ $store.state.activeLang }}</p> -->
  <div v-if="$store.state.db">
   <Header />
     <div class="container">
@@ -10,7 +11,10 @@
             <div class="ancors-container">
               <div class="ancor-item">
                 <div class="item-box">
-                  <router-link :to="{ name: 'KeySkills', params: { id: $store.state.activeLang } }">
+                  <router-link 
+                    :to="{ name: 'KeySkills', params: { id: $store.state.activeLang } }" 
+                    :class="{ activeLink: $store.state.currentPage == 'http://localhost:8080/' }"
+                  >
                     <i class="icon-ios-list-outline"></i>
                     <p class="ancor-text">{{ $store.state.db.routelinks.keyskills }}</p>
                   </router-link>
@@ -18,7 +22,10 @@
               </div>
                 <div class="ancor-item">
                   <div class="item-box">
-                    <router-link :to="{ name: 'Experience', params: { id: $store.state.activeLang } }">
+                    <router-link 
+                      :to="{ name: 'Experience', params: { id: $store.state.activeLang } }"
+                      :class="{ activeLink: $store.state.currentPage == 'http://localhost:8080/experience' }"
+                    >
                       <i class="icon-settings-streamline-2"></i>
                       <p class="ancor-text">{{ $store.state.db.routelinks.experience }}</p>
                     </router-link>
@@ -26,7 +33,10 @@
                 </div>
                 <div class="ancor-item">
                   <div class="item-box">
-                    <router-link :to="{ name: 'Education', params: { id: $store.state.activeLang } }">
+                    <router-link 
+                      :to="{ name: 'Education', params: { id: $store.state.activeLang } }"
+                      :class="{ activeLink: $store.state.currentPage == 'http://localhost:8080/education' }"
+                    >
                       <i class="icon-earth-globe-streamline"></i>
                       <p class="ancor-text">{{ $store.state.db.routelinks.education }}</p>
                     </router-link>
@@ -34,7 +44,10 @@
                 </div>
                 <div class="ancor-item">
                   <div class="item-box">
-                    <router-link :to="{ name: 'Portfolio', params: { id: $store.state.activeLang } }">
+                    <router-link
+                      :to="{ name: 'Portfolio', params: { id: $store.state.activeLang } }"
+                      :class="{ activeLink: $store.state.currentPage == 'http://localhost:8080/portfolio' }"
+                    >
                       <i class="icon-picture-streamline-1"></i>
                       <p class="ancor-text">{{ $store.state.db.routelinks.portfolio }}</p>
                     </router-link>
@@ -72,14 +85,23 @@ export default {
   mounted() {
     // console.log('HEADER')
     // console.log(this.$store.state.db.personal.name)
-    // this.data = this.$store.state.db; // = this.$route.params.id 
+    // this.data = this.$store.state.db; // = this.$route.params.id
   },
   created(){
-      // console.log(this.$router.currentRoute);
+      //console.log(this.$router.currentRoute);
       // this.uri = this.$route.params.id; //this.$route.query.page; //this.$router.history.current.path //window.location.pathname;
       // console.log(this.uri);
       // this.uri = this.$route.query.page
-      // console.log(this.$route.query.page)
+      //console.log(this.$route)
+  },
+  watch: {
+    '$route': function(to, from) {
+      console.log("watcher:", window.location.href)
+      this.$store.currentPage = window.location.href
+      console.log("this.$store.currentPage: ", this.$store.currentPage)
+
+      this.$store.commit('currentPage', window.location.href)
+    }
   }
 }
 </script>

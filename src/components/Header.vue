@@ -1,11 +1,9 @@
 <template lang="html">
   <div v-if="$store.state.db" class="header">
-      <div class="settings_langs" @click="$store.commit('chooseLanguage', $event), $store.commit('getDB', $event)">
-        <a href="#"><span :class="{ activelang: $store.state.activeLang === 'EN' }">EN</span>
-        </a>
+      <div class="settings_langs" @click="$store.commit('getDB', $event)">
+        <a href="#" :class="{ activelang: $store.state.activeLang === 'EN' }" @click="$store.commit('chooseLanguage', $event)">EN</a>
         / 
-        <a href="#"><span :class="{ activelang: $store.state.activeLang === 'DE' }">DE</span>
-        </a>
+        <a href="#" :class="{ activelang: $store.state.activeLang === 'DE' }" @click="$store.commit('chooseLanguage', $event)">DE</a>
       </div>
       <div class="header-text">
           <p class="header-text--title">{{ $store.state.db.personal.name }} {{ $store.state.db.personal.surname }}</p>
