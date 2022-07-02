@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 100;
 }
 
-article, aside, figure, footer, header, nav, section, details, summary {display: block;}
+article, aside, figure, footer, header, nav, section, details {display: block;}
 
 /* Handle box-sizing while better addressing child elements:
    https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */

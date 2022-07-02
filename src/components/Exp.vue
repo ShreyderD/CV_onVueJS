@@ -5,7 +5,7 @@
       <div class="period">
           <div class="center">{{ job.from }} <br />{{ job.to }}</div>
       </div>
-      <div class="position_title" @click="showList(job.id)"><strong>{{ job.title }}</strong> ({{ job.company }}, {{ job.location }})</div>
+      <div class="position_title" :class="{ active: job.id === activeID }" @click="showList(job.id)"><strong>{{ job.title }}</strong> ({{ job.company }}, {{ job.location }})</div>
       <transition name="slide-fade">
         <div v-if="job.id === activeID" class="position__description">
           <p>{{ job.description }}</p>

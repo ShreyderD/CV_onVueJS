@@ -81,10 +81,12 @@ body {
 }
 
 .settings_langs {
-  position: absolute;
-  color: #fff;
-  top: 20px;
-  right: 20px;
+    position: absolute;
+    color: #000;
+    top: 20px;
+    right: 20px;
+    padding: 4px 8px;
+    background: rgba(255, 255, 255, 0.8);
 }
 .settings_langs span {
   cursor: pointer;
@@ -112,7 +114,7 @@ body {
 
 
 .profile_pic {
-    margin: auto 30px 0 0;
+    margin: auto 80px 0 0;
     border-radius: 100%;
     width: 240px;
     border: 2px solid var(--bright-color);
@@ -459,7 +461,8 @@ ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 40px 0 0;
+    align-items: center;
+    padding: 0 0 0 0;
     border-bottom: 1px dotted rgba(204, 204, 204, 1);
 }
 
@@ -493,14 +496,16 @@ ul {
     color: var(--bright-color);
     background: #eeeeee;
 }
+.position_title.active {
+    text-decoration: none;
+    color: var(--black);
+    background: var(--bright-color);
+}
 .position_title_info {
     font-weight: 500;
 }
 .position__description {
-    /* display: none; */
-    width: 100%;
-    padding-left: 28%;
-    margin: 0 0 10px 0;
+    padding: 20px 20px 20px 28%;
 }
 
 .position_sub_titles {

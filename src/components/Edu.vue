@@ -5,7 +5,7 @@
       <div class="period">
         <div class="center">{{ course.from }} - {{ course.to }}</div>
       </div>
-      <div class="position_title" @click="showList(course.id)"><strong>{{ course.title }}</strong> ({{ course.desctiption }})</div>
+      <div class="position_title" :class="{ active: course.id === activeID }" @click="showList(course.id)"><strong>{{ course.title }}</strong> ({{ course.desctiption }})</div>
       <transition name="slide-fade" mode="out-in">
         <div v-if="course.id === activeID" class="position__description">
           <span>{{ course.desctiption }} (<a :href="course.link" target="_blank" rel="nofollow noreferrer noopener">course link</a>)</span>

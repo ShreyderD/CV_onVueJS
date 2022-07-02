@@ -38,16 +38,19 @@
         "skills": [
           "PM Methodology: Agile - Scrum/KANBAN",
           "PM Software: Trello, Monday.com, Jira, Google Sheets",
-          "HTML 5, CSS 3, Bootstrap(3,4)",
-          "JavaScript - Advanced",
+          "HTML 5, CSS 3",
+          "SASS, Flex-Box, Grid, Mobile-First, UX/UI",
+          "JavaScript - advanced",
           "VueJS-2 & VueJS-3 - intermediate",
+          "FireBase: FireStore Database",
+          "OOP - Object-oriented programming",
           "PHP - fundamentals",
-          "Mobile Web Design Optimization",
+          "SAP - development",
+          "SQL - advanced",
+          "VBA - Excel Macros Development",
           "PIM - Content Management Automation (180.000 Products)",
           "Google: Sheets, Docs, Slides, Drive",
-          "Microsoft: Excel, Word, SharePoint",
-          "SAP - development",
-          "VBA - Excel Macros Development"
+          "Microsoft: Excel, Word, SharePoint"
         ]
       },
       {
@@ -73,9 +76,9 @@
       },
       {
         "title": "Additionally",
-        "open": true,
+        "open": false,
         "skills": [
-          "Photoshop",
+          "Photoshop, XD",
           "Design: UX/UI Design",
           "Marketing Strategy Planning",
           "Email Marketing + Mailchimp"
@@ -107,6 +110,23 @@
     "title": "Curriculum Vitae",
     "txt1": "Areas of responsibility:",
     "jobs": [
+      { "id": 14,
+        "from": "2022 March",
+        "to": "up-to-date",
+        "title": "Web Developer",
+        "company": "Atikon",
+        "location": "Linz, Austria",
+        "description": "Web Developer and Web Designer",
+        "aor": [
+          { "title":"Design & Development of Websites",
+            "list": [
+              "SASS, CSS",
+              "DTML/HTML",
+              "JavaScript"
+            ]
+          }
+        ]
+      },
       {
         "id": 13,
         "from": "2020 March",

@@ -38,17 +38,20 @@
         "skills": [
           "PM Methodologie: Agile - Scrum/KANBAN",
           "PM Software: Trello, Monday.com, Jira, Google Sheets",
-          "HTML 5, CSS 3, Bootstrap - fortgeschritten",
+          "HTML 5, CSS 3 - fortgeschritten",
+          "SASS, Flex-Box, Grid, Mobile-First, UX/UI",
           "JavaScript - fortgeschritten",
           "VueJS-2 & VueJS-3 - intermediate",
+          "FireBase: FireStore Database",
+          "OOP - Object-oriented Programming",
           "PHP - leicht fortgeschritten",
-          "Mobile Web Design Optimierung",
+          "SAP - Entwicklung",
+          "SQL - fortgeschritten",
+          "SAP-Excel Integration und Automatisierung der operation Prozessen",
+          "VBA - Excel Macros Entwicklung",
           "PIM - Content Management Automation (180.000 Produkte)",
           "Google: Sheets, Docs, Slides, Drive",
-          "Microsoft: Excel, Word, SharePoint",
-          "SAP - Entwicklung",
-          "SAP-Excel Integration und Automatisierung der operation Prozessen",
-          "VBA - Excel Macros Entwicklung"
+          "Microsoft: Excel, Word, SharePoint"
         ]
       },
       {
@@ -74,9 +77,9 @@
       },
       {
         "title": "Zusätzlich",
-        "open": true,
+        "open": false,
         "skills": [
-          "Photoshop",
+          "Photoshop, XD",
           "Design: UX/UI Design",
           "Marketing Strategy Planning",
           "Email Marketing + Mailchimp"
@@ -104,6 +107,23 @@
     "title": "Lebenslauf",
     "txt1": "Verantwortungsbereiche",
     "jobs": [
+      { "id": 14,
+        "from": "2022 März",
+        "to": "bis laufend",
+        "title": "Web Developer",
+        "company": "Atikon",
+        "location": "Linz, Österreich",
+        "description": "Web Developer und Web Designer",
+        "aor": [
+          { "title":"Design & Entwicklung der Websiten",
+            "list": [
+              "SASS, CSS",
+              "DTML/HTML",
+              "JavaScript"
+            ]
+          }
+        ]
+      },
       {
         "id": 13,
         "from": "2020 März",

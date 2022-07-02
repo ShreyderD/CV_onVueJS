@@ -94,7 +94,7 @@ export default createStore({
       .catch( (err) => { console.log(err.message) })
     },
     async createEntry(){
-      if (window.location.href.includes("local")) {
+      if (!window.location.href.includes("local")) {    //don't record DEV sessions
         const currentDate = new Date()
         const db = getFirestore()   //init firebase services
   
