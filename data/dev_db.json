@@ -524,7 +524,7 @@
       "hobby": [ "Fitness", "Wandern", "Sprachen" ],
       "pitch_title": "Motivationsschreiben",
       "pitch_text": "Hallo Marco, hallo zusammen! Mein Name ist Dmitriy Shreyder (Dima für Freunde ;)). Ich habe seit einigen Wochen über Ihr Startup erfahren und seit dem kann ich etwas weniger schlafen :) Erstens, weil ich ins Team möchte. Zweitens, weil ich nicht glaube, dass es wirklich funktioniert! Seit 2016 habe ich danach praktisch geträumt, dass eines Tages kann ein man kleine Teile von Immobilien oder, was ich damals als Beispiel (beim erzählen das zu meiner Freundin - nun meine Frau) genommen hatte, einer Franchise wie Spar/McDonald's kaufen kann. Stellen Sie sich mein Gesicht im Moment vor in dem ich auf YouTube eine Werbung von Ihnen anschaue...! Natürlich hat sich die Welt seit 2016 entwickelt (Internet & Blockchain) aber dass es schon wirklich soweit ist und vor allem in Österreich hat mich trotzdem so richtig überrascht. \"Wenn du das im DACH Region schaffst - schaffst du es überall\" - den Spruch kenne ich. Seit der Werbung habe ich entschieden mein CV in Ordnung zu bringen, dieses \"Motivationsschreiben\" fertig schreiben und die Chance zu nutzen. Und das habe ich gemacht... In 2014 war ich ein Student (BWL) in Karl-Franzens-Uni. Eines Tages ist mir eine Idee eingefallen - \"Amazon für die Reiche\". In dem Jahr habe ich mein Studium unterbrochen und nie zurückgeschaut. Seit Beginn des Geschäfts habe ich vieles gelernt - wie man die Leute findet um die Webseite zu entwickeln, wie man die Webseite auf 3 Sprachen übersetzt, was Webdesign heisst, Photoshop, HTML und CSS, Marketing Kosten, SEO, wie man die Lieferanten gewinnt und so weiter und so fort. Obwohl ich mehr als 2 Jahren daran tags und nachts gearbeitet habe, konnte ich das Geschäft leider nicht auf die Beine stellen. Dafür habe ich viel gelernt - vor allem HTML/CSS und vor allem SEO. Danach habe ich als SEO Experte und Projekt Manager in einem Goldgeschäft in Wien und einer Apotheke in Tirol gearbeitet, als Datenbearbeiter: SAP und Excel bei Swarovski in Wattens, als Product Owner in einem StartUp in Wien (Bauindustrie), dann als SAP Entwickler in Linz (1,5 Jahre), und nun bin ich in Web zurück. Ich programmiere gerne in JS und VueJS, lerne und nutze die modernen Technologien wie SASS, Flex-Box, Grid und Firebase. Ich programmiere nicht aber halte mich am laufenden in Blockchain Industrie. Neben Programmiersprachen spreche ich Deutsch, Englisch und Russisch. Wenn ich mein Lebenslauf kurz zusammen fassen würde, würde ich sagen - Ich bin 34 Jahre alt, ich lebe in Österreich sein Oktober 2010, seit 2014 bin im IT tätig, bin motiviert und möchte die Welt verändern! Ich sehe sehr grosse Zukunft in dem was Ihr StartUp macht und ich würde gerne behilflich sein ob im Programmierbereich, Manager, oder Real Estate Manager. Gerne würde ich einen Termin für das informelle Gespräch ausmachen, um mich persönlich vorzustellen.",
-      "pitch_text_seo": "Was bestimmt einen guten Spezialist: Fähigkeiten, Kenntnisse, Erfahrung oder akademischer Grad? In der schnelllebigen Umgebung wie IT würde ich auf jemanden setzen, der liebt, was er tut und ständig lernt. Und ich bin genau so einer. Ich bin ein guter Profi nicht deswegen, dass ich die Prüfungen bestanden habe, aber deswegen, dass ich liebe was ich mache. Es hat als Hobby begonnen und jetzt bin ich ein ausgezeichneter Projektmanager und ein hervorragender SEO-Experte. Daher gelangen meine Websiten auf die erste Seite von Google SERP."
+      "pitch_text_seo": "Was bestimmt einen guten Spezialist: Fähigkeiten, Kenntnisse, Erfahrung oder akademischer Grad? In der schnelllebigen Umgebung wie IT würde ich auf jemanden setzen, der liebt, was er tut und ständig lernt. Und ich bin genau so einer. Ich bin ein guter Profi nicht deswegen, dass ich die Prüfungen bestanden habe, aber deswegen, dass ich liebe was ich mache. Es hat als Hobby begonnen und jetzt bin ich ein ausgezeichneter Projektmanager und ein hervorragender SEO-Experte. Daher gelangen meine Webseiten auf die erste Seite von Google SERP."
     },
     "skilllist": {
       "title": "Schlüsselfertigkeiten",
@@ -538,7 +538,7 @@
             "HTML 5, CSS 3 - fortgeschritten",
             "SASS, Flex-Box, Grid, Mobile-First, UX/UI",
             "JavaScript - fortgeschritten",
-            "VueJS-2 & VueJS-3 - intermediate",
+            "VueJS-2 & VueJS-3 - leicht fortgeschritten",
             "FireBase: FireStore Database",
             "OOP - Object-oriented Programming",
             "PHP - leicht fortgeschritten",
@@ -613,7 +613,7 @@
           "location": "Linz, Österreich",
           "description": "Web Developer und Web Designer",
           "aor": [
-            { "title":"Design & Entwicklung der Websiten",
+            { "title":"Design & Entwicklung der Webseiten",
               "list": [
                 "SASS, CSS",
                 "DTML/HTML",
