@@ -8,6 +8,7 @@
   --bright-color: #ff9b1f;
   --darktgrey: #242424;
   --middlegrey: #dfdbdb;
+  --middlegrey2: #cecbcb;
   --lightgrey: #eee;
   --padding-main: 15px;
   --time: 150ms;
@@ -61,7 +62,14 @@ body {
 }
 
 .a0 {
+    display: inline-flex;
     text-decoration: none;
+}
+.a0:hover {
+    text-decoration: none;
+}
+.a0:hover i {
+    color: var(--bright-color);
 }
 
 .text404 {
@@ -203,6 +211,7 @@ a:hover {
 }
 
 .cover_letter {
+    display: none;
     background: var(--darktgrey);
     padding: var(--padding-main);
     color: var(--white);
@@ -215,7 +224,7 @@ a:hover {
 .icons {
     display: flex;
     padding: var(--padding-main);
-    background: var(--bright-color);
+    background: var(--middlegrey2);
     flex-grow: 1;
 }
 
